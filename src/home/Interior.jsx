@@ -9,6 +9,9 @@ import Helmet from "../component/common/Helmet";
 import TeamOne from "../blocks/team/TeamOne";
 import Slider from "react-slick";
 import { slickDot , portfolioSlick2 } from "../page-demo/script";
+import ContactTwo from "../elements/contact/ContactTwo";
+import { FiHeadphones , FiMail , FiMapPin } from "react-icons/fi";
+
 
 
 const SlideList = [
@@ -18,7 +21,8 @@ const SlideList = [
         title: 'ATX Float',
         description: 'There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration.',
         buttonText: 'Shop Now!',
-        buttonLink: '/contact'
+        // buttonLink: '/contact'
+        buttonLink: 'portfolio'
     }
 ]
 
@@ -26,8 +30,9 @@ const backgroundStyle = {
 
     // backgroundImage: `url('IMG_6288.png')`,
     backgroundImage: `url('/assets/images/bg/ATXBanner.jpg')`,
-    // backgroundSize: '150% auto',
-    backgroundSize: 'cover',
+      backgroundPosition: 'center 70%',
+      backgroundSize: 'cover', // Choose the desired option
+    
     
     // trydo/build/assets/images/bg/ATXBanner.jpg
 
@@ -42,8 +47,18 @@ const backgroundlightYellow = {
 }
 
 const backGroundBrown = {
-    backgroundColor: '#dad27a'
+    backgroundColor: '#f3edd1'
 }
+
+const contactAreaStyle = {
+    padding: '75px 0', // 30px padding on top and bottom, 0px padding on left and right
+    backgroundColor: '#f3edd1',
+
+ }
+
+ const footerBackground ={
+    backgroundColor: '#FF9C00'
+ }
 
 const backgroundStyleService = {
     backgroundColor: 'rgb(196 225 245)',
@@ -110,6 +125,25 @@ const ServiceListOne = [
     // <span> Shipping Anywhere </span>
     // <span> Top Notch Support </span>
     // <span> Custom Designs </span>
+]
+
+const list = [
+    {
+        image: 'image-1',
+        category: 'River Tubes',
+        title: 'Get your custom made river tubes here!!'
+    },
+    {
+        image: 'image-2',
+        category: 'Park Tubes',
+        title: 'Get tubes for your water park here!'
+    },
+    {
+        image: 'image-3',
+        category: 'Awesome Gear',
+        title: 'Every adventure needs extra gear. Click here'
+    },
+
 ]
 
 
@@ -194,17 +228,21 @@ class InteriorLanding extends Component{
                             <nav className="mainmenunav d-lg-block">
                                 <Scrollspy className="mainmenu" style={{ fontFamily: 'Brice-Light' }} items={['home','service','getstart','about','team','testimonial','portfolio']} currentClassName="is-current" offset={-200}>
                                     <li><a href="#home">Home</a></li>
+                                    {/* <li><a href="#catalog">Catalog</a></li> */}
                                     {/* <li><a href="#service">Service</a></li>
                                     <li><a href="#getstart">Get Start</a></li>
                                     <li><a href="#about">About</a></li> */}
+                                    <li><a href="#about">About</a></li> 
+                                    {/* <li><a href="#testimonial">Testimonial</a></li> */}
                                     <li><a href="#team">Team</a></li>
-                                    <li><a href="#testimonial">Testimonial</a></li>
-                                    <li><a href="#catalog">Catalog</a></li>
+                                    <li><a href="#contact">Contact</a></li>
+                                    <li><a href="portfolio" style={{ fontFamily: 'Brice-Black'}}>Catalog</a></li> 
+                                    
                                 </Scrollspy>
                             </nav>
                             <div className="header-btn">
                                 <a className="rn-btn" href="#catalog">
-                                    <span>Shop Now</span>
+                                    <span style={{ fontFamily: 'Brice-Black'}}>Shop Now</span>
                                 </a>
                             </div>
                             {/* Start Humberger Menu  */}
@@ -225,7 +263,7 @@ class InteriorLanding extends Component{
                 <div className="slider-activation slider-creative-agency" id="home">
                     <div className="bg_image bg_image--100" style={backgroundStyle} data-black-overlay="1">
                         {SlideList.map((value , index) => (
-                            <div className="slide slide-style-2 slider-paralax d-flex align-items-center justify-content-center" key={index}>
+                            <div className="slide slide-style-2 slider-paralax d-flex align-items-center justify-content-center" key={index} href="portfolio">
                                 <div className="container">
                                     <div className="row">
                                         <div className="col-lg-12">
@@ -234,7 +272,7 @@ class InteriorLanding extends Component{
                                                 {value.category ? <span>{value.category}</span> : ''}
                                                 {value.title ? <h1 className="title theme-gradient">{value.title}</h1> : ''}
                                                 {value.description ? <p style={{ fontFamily: 'Brice-Light' }} className="description">{value.description}</p> : ''}
-                                                {value.buttonText ? <div  style={{ fontFamily: 'Brice-Light' }}className="slide-btn"><a className="rn-button-style--2 btn-primary-color" href="#catalog">{value.buttonText}</a></div> : ''}
+                                                {value.buttonText ? <div  style={{ fontFamily: 'Brice-Light' }}className="slide-btn"><a className="rn-button-style--2 btn-primary-color" href={`${value.buttonLink}`} >{value.buttonText}</a></div> : ''}
                                                 {/* href={`${value.buttonLink}`} */}
                                             </div>
                                         </div>
@@ -248,7 +286,7 @@ class InteriorLanding extends Component{
 
                 
                                 {/* Start Portfolio Area */}
-                <div className="portfolio-area ptb--120 bg_color--1" id="catalog" style={ backgroundlightYellow }>
+                <div className="portfolio-area ptb--120 bg_color--1" id="catalog" style={ backGroundBrown }>
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
@@ -259,21 +297,24 @@ class InteriorLanding extends Component{
                             </div>
                         </div>
                     </div>
-                    <div className="wrapper portfolio-sacousel-inner mb--55">
+                    <div className="wrapper portfolio-sacousel-inner mb--55" style={{marginBottom: '15px'}}>
                         <div className="portfolio-slick-activation mt--30 mt_sm--30">
                             <Slider {...portfolioSlick2}>
+                            {/* <Slider {...list}> */}
+                            {/* list */}
                                 {PortfolioList2.map((value , index) => (
-                                    <div className="portfolio portfolio-interior-design" key={index}>
+                                    <div className="portfolio portfolio-interior-design" key={index} href="/portfolio">
                                         <div className="thumbnail-inner">
                                             <div className={`thumbnail ${value.image}`}></div>
                                             <div className={`bg-blr-image ${value.image}`}></div>
                                         </div>
                                         <div className="content">
                                             <div className="inner">
-                                                <p>{value.category}</p>
-                                                <h4><a href="/portfolio-details">{value.title}</a></h4>
+                                                <p style={{fontFamily: 'Brice-Black'}} href="/portfolio">{value.category}</p>
+                                                <h4 style={{fontFamily: 'Brice-Black'}}><a href="/portfolio">{value.title}</a></h4>
                                                 <div className="portfolio-button">
-                                                    <a className="rn-btn" href="/portfolio-details">Case Study</a>
+                                                    <a className="rn-btn" href="/portfolio">Case Study</a>
+                                                    {/* href="/portfolio-details" */}
                                                 </div>
                                             </div>
                                         </div>
@@ -286,12 +327,12 @@ class InteriorLanding extends Component{
                 {/* End Portfolio Area */}
 
                 {/* Start Service Area  */}
-                <div className="service-area creative-service-wrapper ptb--120 bg_color--1" style={backGroundBrown} id="service">
+                <div className="service-area creative-service-wrapper ptb--120 bg_color--1" style={{backgroundColor: '#f3edd1', padding: '10px'}} id="service">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-8">
                                 <div className="feature-area">
-                                    <span style={{ color: '#ef5474'}}>FUTURE HOUSE</span>
+                                    <span style={{ color: '#ef5474', fontFamily: 'Brice-Black', fontSize: '45px'}}>Wholesale Custom Gear</span>
                                     <h3 className="title mt--20 fontWeight500 lineheight--1-8">ATX Float is a team of product developers & designers, graphic artists, sales managers, and distribution personnel. The product design and management team office in Austin Texas, and warehousing and distribution is based in New Braunfels Texas.</h3>
                                 </div>
                             </div>
@@ -305,8 +346,8 @@ class InteriorLanding extends Component{
                                                 {/* <img src={`/assets/images/icons/${val.icon}`} alt="Service Icon"/> */}
                                             </div>
                                             <div className="content">
-                                                <h4 style={{ color: '#ef5474'}} className="title">{val.title}</h4>
-                                                <p style={{ color: '#423f39' }}>{val.description}</p>
+                                                <h4 style={{ color: '#ef5474', fontFamily: 'Brice-Black'}} className="title">{val.title}</h4>
+                                                <p style={{ color: '#423f39', fontFamily: 'Brice-Light' }}>{val.description}</p>
                                             </div>
                                         </div>
                                     </a>
@@ -345,7 +386,7 @@ class InteriorLanding extends Component{
                 {/* End CounterUp Area */}
 
                 {/* Start Content Box  */}
-                <div className="rn-content-box-area rn-content-box-style--1 pb--120 bg_color--1" id="about" style={{ paddingTop: '30px' }}>
+                <div className="rn-content-box-area rn-content-box-style--1 pb--120 bg_color--1" id="about" style={{backgroundColor: '#f3edd1', paddingTop: '10px' }}>
                     <div className="row row--0 align-items-center">
                         <div className="col-lg-12 col-xl-4">
                             <div className="thumbnail">
@@ -359,7 +400,7 @@ class InteriorLanding extends Component{
                         {/* mt_lg--50 mt_md--30 mt_sm--30 */}
                             <div className="content">
                                 {/* <p className="subtitle"><span>Modern</span> Design For Interior</p> */}
-                                <h2 className="fontWeight500" style={{ color: 'black' }}>How We Started</h2>
+                                <h2 className="fontWeight500" style={{ color: '#EF5474', fontFamily: 'Brice-Black' }}>How We Started</h2>
                                 <p> Founded by Zachary Martin in 2013, ATX Float was born on the rivers in Central Texas. While running another product development company called Product Creations Group and living in Austin Texas, Zach spent much of the summers on the rivers in San Marcos Texas and New Braunfels Texas. <br/><br/>After realizing a significant need for better equipment and gear, Zach began developing river tubes, waterproof phone pouches, dry bags, and other waterproof gear that replaced the old black tire inner tubes and other tired old products used and discarded in the rivers. The new colorful tubes and products have added value to river patrons and enhanced the beauty of the rivers by changing the visual landscape of tubes floating down the river while allowing the river operators to customize their branding and equipment to better serve their river patrons.
                                 <br/><br/>As the river supply grew, Zach expanded the team and product line serving waterparks, beaches, marinas, and retailers while giving the watersport supply operation its own brand name and life under ATX Float. 
                                 <br/><br/>ATX Float now supplies wholesale tubes and products to Waterparks, River Outfitters, Marinas, Beach Shops, and retailers all around the USA and abroad. </p>
@@ -377,15 +418,16 @@ class InteriorLanding extends Component{
                 {/* End Content Box  */}
 
                 {/* Start Team Area  */}
-                <div className="rn-team-wrapper pb--120 bg_color--1" id="team">
+                <div className="rn-team-wrapper pb--120 bg_color--1" id="team" style={{backgroundColor: '#f3edd1', paddingTop: '70px'}}>
                     <div className="rn-team-area">
                         <div className="container">
                             <div className="row">
-                                <div className="col-lg-8">
+                                <div className="col-lg-12">
                                     <div className="section-title text-left mb--30">
-                                        <h2>Meet Our Designer</h2>
-                                        <p>There are many variations of passages of Lorem Ipsum available, <br /> but the majority have suffered alteration.</p>
+                                        <h2 style={{ color: '#EF5474', fontFamily: 'Brice-Black', textAlign: 'center' }}>Meet Our Designers</h2>
+                                        {/* <p>There are many variations of passages of Lorem Ipsum available, <br /> but the majority have suffered alteration.</p> */}
                                     </div>
+                                    
                                 </div>
                             </div>
                             <TeamOne column="col-lg-3 col-md-6 col-sm-6 col-12" teamStyle="team-style--bottom" item="4" />
@@ -393,15 +435,75 @@ class InteriorLanding extends Component{
                     </div>
                 </div>
                 {/* End Team Area  */}
+                {/* <ContactTwo /> */}
 
                 {/* Start Testimonial Area */}
-                <div className="rn-testimonial-area bg_color--5 ptb--120" id="testimonial" >
+                {/* <div className="rn-testimonial-area bg_color--5 ptb--120" id="testimonial" >
                     <div className="container">
                         <Testimonial />
                     </div>
-                </div>
+                </div> */}
                 {/* End Testimonial Area */}
                 
+                <div id="contact" style={contactAreaStyle}>
+                <ContactTwo />
+                </div>
+
+                                {/* Start Contact Top Area  */}
+                                <div className="rn-contact-top-area ptb--120 bg_color--5" style={footerBackground}>
+                    <div className="container">
+                       
+                        <div className="row">
+                            {/* Start Single Address  */}
+                            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div className="rn-address" style={{ backgroundColor: '#7ADEE2'}}>
+                                    <div className="icon" style={{ color: '#EF5474'}}>
+                                        <FiHeadphones />
+                                    </div>
+                                    <div className="inner">
+                                        <h4 className="title">Call Us!</h4>
+                                        <p><a href="tel:+1-512-210-5959">1-512-210-5959</a></p><br/>
+                                        {/* <p><a href="tel:+856 325 652 984">+856 325 652 984</a></p> */}
+                                    </div>
+                                </div>
+                            </div>
+                            {/* End Single Address  */}
+
+                            {/* Start Single Address  */}
+                            <div className="col-lg-4 col-md-6 col-sm-6 col-12 mt_mobile--50">
+                                <div className="rn-address" style={{ backgroundColor: '#7ADEE2'}}>
+                                    <div className="icon" style={{ color: '#EF5474'}}>
+                                        <FiMail />
+                                    </div>
+                                    <div className="inner">
+                                        <h4 className="title">Email Address</h4>
+                                        <p><a href="mailto:team@atxfloat.com">team@atxfloat.com</a></p><br/>
+                                        {/* <p><a href="mailto:example@gmail.com">example@gmail.com</a></p> */}
+                                    </div>
+                                </div>
+                            </div>
+                            {/* End Single Address  */}
+
+                            {/* Start Single Address  */}
+                            <div className="col-lg-4 col-md-6 col-sm-6 col-12 mt_md--50 mt_sm--50">
+                                <div className="rn-address" style={{ backgroundColor: '#7ADEE2'}}>
+                                    <div className="icon" style={{ color: '#EF5474'}}>
+                                        <FiMapPin />
+                                    </div>
+                                    <div className="inner">
+                                        <h4 className="title">Location</h4>
+                                        
+
+                                        <p>411 W Monroe St<br /> Austin, TX 78704</p>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* End Single Address  */}
+
+                        </div>
+                    </div>
+                </div>
+                {/* End Contact Top Area  */}
 
 
                  {/* Start Footer Style  */}

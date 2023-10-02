@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { FiX , FiMenu } from "react-icons/fi";
 
 
+
+const headerStyle = {
+    backgroundImage: `url('/assets/images/IMG_6288.png')`,
+  };
 class Header extends Component{
     constructor(props) {
         super(props);
@@ -22,6 +26,8 @@ class Header extends Component{
     CLoseMenuTrigger() {
         document.querySelector('.header-wrapper').classList.remove('menu-open');
     }
+
+    
 
 
     render(){
@@ -52,9 +58,7 @@ class Header extends Component{
 
         
         return(
-            <header className={`header-area formobile-menu header--transparent ${color}`}     style={{
-                backgroundImage: `url('./portfolio-static-07.jpg')`, // Use the relative path to your image
-              }}>
+            <header className={`header-area formobile-menu header--transparent ${color}`}  >
                 <div className="header-wrapper" id="header-wrapper">
                     <div className="header-left">
                         <div className="logo">
@@ -66,10 +70,10 @@ class Header extends Component{
                         </div>
                     </div>
                     <div className="header-right">
-                        <nav className="mainmenunav d-lg-block">
+                        <nav className="mainmenunav d-lg-block" style={{fontFamily: 'Brice-Light'}} >
                             <ul className="mainmenu">
-                                <li className="has-droupdown"><Link to="#">Home</Link>
-                                    <ul className="submenu">
+                                <li className="has-droupdown"><Link to="/">Home</Link>
+                                    {/* <ul className="submenu">
                                         <li><Link to="/main-demo">Main Demo</Link></li>
                                         <li><Link to="/dark-main-demo">Main Demo Dark</Link></li>
                                         <li><Link to="/creative-agency">Creative Agency</Link></li>
@@ -87,17 +91,17 @@ class Header extends Component{
                                         <li><Link to="/studio-agency">Studio Agency</Link></li>
                                         <li><Link to="/designer-portfolio">Designer Portfolio</Link></li>
                                         <li><Link to="/interactive-agency">Interactive Agency</Link></li>
-                                    </ul>
+                                    </ul> */}
                                 </li>
-                                <li className="has-droupdown"><Link to="/service" >Service</Link>
+                                {/* <li className="has-droupdown"><Link to="/service" >Service</Link>
                                     <ul className="submenu">
                                         <li><Link to="/service">Service</Link></li>
                                         <li><Link to="/service-details">Service Details</Link></li>
                                     </ul>
-                                </li>
+                                </li> */}
                                 <li><Link to="/about" >About</Link></li>
 
-                                <li className="has-droupdown"><Link to="#pages" >Pages</Link>
+                                {/* <li className="has-droupdown"><Link to="#pages" >Pages</Link>
                                     <ul className="submenu">
                                         <li><Link to="/blog">Blog List</Link></li>
                                         <li><Link to="/blog-details">Blog Details</Link></li>
@@ -107,8 +111,8 @@ class Header extends Component{
                                         <li><Link to="/portfolio-details">Portfolio Details</Link></li>
                                         <li><Link to="/404">404</Link></li>
                                     </ul>
-                                </li>
-                                <li className="has-droupdown"><Link to="#" >Blocks</Link>
+                                </li> */}
+                                {/* <li className="has-droupdown"><Link to="#" >Blocks</Link>
                                     <ul className="submenu">
                                         <li><Link to="/portfolio">Portfolio</Link></li>
                                         <li><Link to="/team">Team</Link></li>
@@ -124,14 +128,14 @@ class Header extends Component{
                                         <li><Link to="/columns">Columns</Link></li>
                                         <li><Link to="/pricing-table">Pricing Table</Link></li>
                                     </ul>
-                                </li>
+                                </li> */}
                                 <li><Link to="/contact" >Contact</Link></li>
                             </ul>
                         </nav>
                         <div className="header-btn">
-                            <a className="rn-btn" href="https://themeforest.net/checkout/from_item/25457315?license=regular">
-                                <span>buy now</span>
-                            </a>
+                            {/* <a className="rn-btn" href="portfolio">
+                                <span>shop now!!!</span>
+                            </a> */}
                         </div>
                         {/* Start Humberger Menu  */}
                         <div className="humberger-menu d-block d-lg-none pl--20">

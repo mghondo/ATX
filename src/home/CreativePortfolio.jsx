@@ -93,10 +93,10 @@ const CreativePortfolio = () => {
                                         </a>
                                     </div>
                                     <div className="content">
-                                        <p className="portfoliotype">{value.category}</p>
-                                        <h4 className="title"><a href="/portfolio-details">{value.title}</a></h4>
+                                        <p style={{fontFamily: 'Brice-Light'}} className="portfoliotype">{value.category}</p>
+                                        <h4 style={{fontFamily: 'Brice-Black'}} className="title"><a href="/portfolio-details">{value.title}</a></h4>
                                         <div className="portfolio-btn">
-                                            <a className="rn-btn text-white" href="/portfolio-details">Read More</a>
+                                            <a style={{fontFamily: 'Brice-Black'}} className="rn-btn text-white" href="/portfolio-details">Read More</a>
                                         </div>
                                     </div>
                                 </div>

@@ -11,33 +11,33 @@ import Footer from "../component/footer/Footer";
 
 const list = [
     {
-        image: 'image-1',
-        category: 'Development',
-        title: 'Getting tickets to the big show'
-    },
-    {
-        image: 'image-2',
-        category: 'Development',
-        title: 'Getting tickets to the big show'
-    },
-    {
         image: 'image-3',
         category: 'Development',
         title: 'Getting tickets to the big show'
     },
     {
-        image: 'image-4',
-        category: 'Development',
+        image: 'image-3',
+        category: 'Development1',
         title: 'Getting tickets to the big show'
     },
     {
         image: 'image-3',
-        category: 'Development',
+        category: 'Development2',
         title: 'Getting tickets to the big show'
     },
     {
-        image: 'image-4',
-        category: 'Development',
+        image: 'image-3',
+        category: 'Development3',
+        title: 'Getting tickets to the big show'
+    },
+    {
+        image: 'image-3',
+        category: 'Development4',
+        title: 'Getting tickets to the big show'
+    },
+    {
+        image: 'image-3',
+        category: 'Development5',
         title: 'Getting tickets to the big show'
     }
 ]

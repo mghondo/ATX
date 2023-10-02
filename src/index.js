@@ -64,7 +64,12 @@ class Root extends Component {
       <BrowserRouter basename={"/"}>
         <PageScrollTop>
           <Switch>
-            <Route exact path={`${process.env.PUBLIC_URL}/`} component={Demo} />
+            {/* <Route exact path={`${process.env.PUBLIC_URL}/`} component={Demo} /> */}
+            <Route
+              exact
+              path={`${process.env.PUBLIC_URL}/`}
+              component={InteriorLanding}
+            />
             <Route
               exact
               path={`${process.env.PUBLIC_URL}/main-demo`}

@@ -8,17 +8,26 @@ const SocialShare = [
     {Social: <FaTwitter /> , link: 'https://twitter.com/'},
 ]
 
+
+const backGroundBrown = {
+    backgroundColor: '#dad27a'
+}
 class Footer extends Component{
     render(){
         return(
             <React.Fragment>
-                <footer className="footer-area">
-                    <div className="footer-wrapper">
+                <footer className="footer-area" >
+                    <div className="footer-wrapper" >
                         <div className="row align-items-end row--0">
                             <div className="col-lg-6">
-                                <div className="footer-left">
+                                <div className="footer-left" data-black-overlay="9" style={{
+  backgroundImage: `url(${require('./ATX-Float-Logo.jpg')})`,
+  backgroundSize: 'cover', // You can adjust this property as needed
+  backgroundPosition: 'center', // You can adjust this property as needed
+  backgroundRepeat: 'no-repeat', // You can adjust this property as needed
+}}>
                                     <div className="inner">
-                                        <span>Ready To Do This</span>
+                                        <span style={{fontFamily: 'Brice-Light'}}>Ready To Do This</span>
                                         <h2>Let's get <br /> to work</h2>
                                         <a className="rn-button-style--2" href="/contact">
                                             <span>Contact Us</span>
@@ -31,8 +40,8 @@ class Footer extends Component{
                                     <div className="row">
                                         {/* Start Single Widget  */}
                                         <div className="col-lg-6 col-sm-6 col-12">
-                                            <div className="footer-link">
-                                                <h4>Quick Link</h4>
+                                            <div className="footer-link" style={{fontFamily: 'Brice-Light'}}>
+                                                <h4 style={{fontFamily: 'Brice-Light', color: 'white'}}>Quick Link</h4>
                                                 <ul className="ft-link">
                                                     <li><a href="/portfolio">Work</a></li>
                                                     <li><a href="/about">About</a></li>
@@ -44,10 +53,10 @@ class Footer extends Component{
                                         {/* Start Single Widget  */}
                                         <div className="col-lg-6 col-sm-6 col-12 mt_mobile--30">
                                             <div className="footer-link">
-                                                <h4>Say Hello</h4>
+                                                <h4 style={{fontFamily: 'Brice-Light', color: 'white'}}>Say Hello</h4>
                                                 <ul className="ft-link">
-                                                    <li><a href="mailto:admin@example.com">admin@example.com</a></li>
-                                                    <li><a href="mailto:hr@example.com">hr@example.com</a></li>
+                                                    <li style={{fontFamily: 'Brice-Light'}}><a href="mailto:admin@example.com">admin@example.com</a></li>
+                                                    <li style={{fontFamily: 'Brice-Light'}}><a href="mailto:hr@example.com">hr@example.com</a></li>
                                                 </ul>
 
                                                 <div className="social-share-inner">
@@ -63,7 +72,7 @@ class Footer extends Component{
 
                                         <div className="col-lg-12">
                                             <div className="copyright-text">
-                                                <p>Copyright © 2022 Rainbow-Themes. All Rights Reserved.</p>
+                                                {/* <p style={{fontFamily: 'Brice-Light'}}>Copyright © 2023 Rainbow-Themes. All Rights Reserved.</p> */}
                                             </div>
                                         </div>
                                     </div>

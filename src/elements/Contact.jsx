@@ -33,7 +33,7 @@ class Contact extends Component{
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="rn-page-title text-center pt--100">
-                                    <h2 className="title theme-gradient">Contact With Us</h2>
+                                    <h2 className="title theme-gradient" style={{ fontFamily: 'Brice-Black'}}>Contact With Us!!</h2>
                                     <p>Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
                                 </div>
                             </div>
