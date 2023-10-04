@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from "react";
 import PageHelmet from "../component/common/Helmet";
 import Breadcrumb from "../elements/common/Breadcrumb";
 import ScrollToTop from 'react-scroll-up';
@@ -8,7 +8,46 @@ import Footer from "../component/footer/Footer";
 import Slider from "react-slick";
 import PortfolioList from "../elements/portfolio/PortfolioList";
 import { slickDot , portfolioSlick2 } from "../page-demo/script";
+import {Link} from "react-router-dom";
+import PortfolioListNew from "../elements/portfolio/PortfolioListNew";
 
+
+const portfolioItems = [
+    {
+        image: 'image-1',
+        category: 'Development',
+        title: 'Getting tickets to the big show',
+        url: `/assets/images/portfolio/portfolio-6.jpg`,
+        addittionalStyles: ''
+        // trydo/public/assets/images/portfolio/portfolio-6.jpg
+        
+    },
+    {
+        image: 'image-2',
+        category: 'Development Bitch',
+        title: 'Getting tickets to the big show',
+        url: '/assets/images/about/about-3.png',
+        addittionalStyles: ''
+
+        
+    },
+    {
+        image: 'test',
+        category: 'Development Bitch',
+        title: 'Getting tickets to the big show',
+        url: '/assets/images/portfolio/interior/atx_float_tubes_0012_atx_float_tubes.png_0009_Vector-Smart-Object-1.png',
+        addittionalStyles: ''
+    },
+    {
+        image: 'test',
+        category: 'Development Bitch',
+        title: 'Getting tickets to the big show',
+        url: '/assets/scss/ATX_Float_Wholesale_files/photo-19-scaled-thumbnail-optimized_0012_rudys1.png',
+        addittionalStyles: ''
+    },
+    
+    // ... add more portfolio items as needed
+  ];
 
 const list = [
     {
@@ -69,7 +108,7 @@ const PortfolioList2 = [
         title: ' Getting tickets to the big show'
     },
     {
-        image: 'image-4',
+        image: 'image-5',
         category: 'Development',
         title: ' Getting tickets to the big show'
     }
@@ -84,7 +123,7 @@ const backgroundlightYellow = {
 }
 
 const backGroundBrown = {
-    backgroundColor: '#dad27a'
+    backgroundColor: '#f3edd1'
 }
 
 const contactAreaStyle = {
@@ -96,10 +135,12 @@ const headerStyle = {
     backgroundImage: `url('/assets/images/IMG_6288.png')`,
   };
 
+
 const Portfolio = () => {
+    
     return (
         <>
-        <div style={{backgroundColor: '#dad27a'}}>
+        <div style={{ backgroundColor: '#f3edd1'}}>
             <PageHelmet pageTitle='Counters' />
 
             {/* Start Header Area  */}
@@ -120,7 +161,7 @@ const Portfolio = () => {
                             <div className="row">
                                 <div className="col-lg-12">
                                 <div className="section-title text-center service-style--3 mb--30">
-                                        <h2 style={{fontFamily: 'Brice-Black', color: 'black'}} className="title">Park Tubes, River Tubes and More!!!</h2>
+                                        <h2 style={{fontFamily: 'Brice-Black', color: '#ef5474'}} className="title">Park Tubes, River Tubes and More!!!</h2>
                                         {/* <p>Our main categories of products are below.</p> */}
                                     </div>
                                     <div className="slick-space-gutter--15 slickdot--20">
@@ -133,10 +174,10 @@ const Portfolio = () => {
                                                     </div>
                                                     <div className="content">
                                                         <div className="inner">
-                                                            <p style={{fontFamily: 'Brice-Black', fontSize: '40px'}}>{value.category}</p>
+                                                            <p style={{fontFamily: 'Brice-Black', fontSize: '40px', color: '#ef5474'}}>{value.category}</p>
                                                             <h4 style={{fontFamily: 'Brice-Light'}}><a href="/portfolio-details">{value.title}</a></h4>
                                                             <div className="portfolio-button">
-                                                                <a style={{fontFamily: 'Brice-Black'}} className="rn-btn" href="/portfolio-details">Case Study</a>
+                                                                <a style={{fontFamily: 'Brice-Black'}} className="rn-btn" href="/portfolio-details">See More!</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -160,7 +201,7 @@ const Portfolio = () => {
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="section-title text-center service-style--3 mb--30">
-                                        <h2 style={{fontFamily: 'Brice-Black', color: 'black'}} className="title">River Tubes</h2>
+                                        <h2 style={{fontFamily: 'Brice-Black', color: '#ef5474'}} className="title">River Tubes</h2>
                                         <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
                                     </div>
                                 </div>
@@ -186,7 +227,7 @@ const Portfolio = () => {
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="section-title text-center service-style--3 mb--30">
-                                        <h2 style={{fontFamily: 'Brice-Black', color: 'black'}} className="title">Park Tubes</h2>
+                                        <h2 style={{fontFamily: 'Brice-Black', color: '#ef5474'}} className="title">Park Tubes</h2>
                                         <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
                                     </div>
                                 </div>
@@ -212,7 +253,7 @@ const Portfolio = () => {
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="section-title text-center service-style--3 mb--30">
-                                        <h2 style={{fontFamily: 'Brice-Black', color: 'black'}} className="title">Awesome Gear</h2>
+                                        <h2 style={{fontFamily: 'Brice-Black', color: '#ef5474'}} className="title">Awesome Gear</h2>
                                         <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
                                     </div>
                                 </div>
@@ -232,43 +273,34 @@ const Portfolio = () => {
                 </div>
                 {/* End Portfolio Area */}
 
-                {/* Start Portfolio Area */}
-                {/* <div className="portfolio-area ptb--120 bg_color--1" style={backGroundBrown}>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <div className="section-title text-center service-style--3 mb--30">
-                                    <h2 style={{fontFamily: 'Brice-Black', color: 'black'}} className="title">All Works</h2>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+
+
+                <div className="portfolio-area ptb--120 bg_color--5"  style={backGroundBrown}>
+                    <div className="portfolio-sacousel-inner">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    <div className="section-title text-center service-style--3 mb--30">
+                                        <h2 style={{fontFamily: 'Brice-Black', color: '#ef5474'}} className="title">Port New</h2>
+                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row">
+                                {/* <PortfolioList styevariation="text-left mt--40" column="col-lg-4 col-md-6 col-sm-6 col-12" item="6" /> */}
+                                <PortfolioListNew styevariation="text-left mt--40" column="col-lg-4 col-md-6 col-sm-6 col-12" item="6" portfolioItems={portfolioItems} />
+                            </div>
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    <div className="view-more-btn mt--60 text-center">
+                                        {/* <a className="rn-button-style--2 btn-solid" href="/portfolio"><span>View More Project</span></a> */}
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="wrapper portfolio-sacousel-inner mb--55">
-                        <div className="portfolio-slick-activation mt--70 mt_sm--40">
-                            <Slider {...portfolioSlick2}>
-                                {PortfolioList2.map((value , index) => (
-                                    <div className="portfolio" key={index}>
-                                        <div className="thumbnail-inner">
-                                            <div className={`thumbnail ${value.image}`}></div>
-                                            <div className={`bg-blr-image ${value.image}`}></div>
-                                        </div>
-                                        <div className="content">
-                                            <div className="inner">
-                                                <p>{value.category}</p>
-                                                <h4><a href="/portfolio-details">{value.title}</a></h4>
-                                                <div className="portfolio-button">
-                                                    <a className="rn-btn" href="/portfolio-details">Case Study</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </Slider>
-                        </div>
-                    </div>
-                </div> */}
-                {/* End Portfolio Area */}
+                </div>
+
 
             </main>
             {/* End Page Wrapper  */}
@@ -276,7 +308,7 @@ const Portfolio = () => {
             {/* Start Back To Top */}
             <div className="backto-top">
                 <ScrollToTop showUnder={160}>
-                    <FiChevronUp />
+                <FiChevronUp style={{ color: '#EF5474'}}/>
                 </ScrollToTop>
             </div>
             {/* End Back To Top */}

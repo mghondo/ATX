@@ -3,7 +3,7 @@ import data from "./data";
 const TeamOne = (props) => {
     const itemSlice = data.slice(0 , props.item)
     return (
-        <div className="row">
+        <div className="row" style={{ display: 'flex', justifyContent: 'center' }}>
             {itemSlice.map((value , i ) => (
                 <div className={`${props.column}`} key={i}>
                     <div className={`team ${props.teamStyle}`}>

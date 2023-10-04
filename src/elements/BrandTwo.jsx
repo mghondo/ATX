@@ -4,7 +4,7 @@ class BrandTwo extends Component{
     render(){
         return(
             <React.Fragment>
-                <ul className="brand-style-2">
+                {/* <ul className="brand-style-2">
                     <li>
                         <img src="/assets/images/brand/brand-01.png" alt="Logo Images"/>
                     </li>
@@ -32,7 +32,7 @@ class BrandTwo extends Component{
                     <li>
                         <img src="/assets/images/brand/brand-04.png" alt="Logo Images"/>
                     </li>
-                </ul>
+                </ul> */}
             </React.Fragment>
         )
     }

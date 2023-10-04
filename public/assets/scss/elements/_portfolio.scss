@@ -109,6 +109,7 @@
         opacity: 0;
         z-index: 1;
 
+        // WHERE TO CHANGE THE IMAGES IN THE PORTFOLIO LOVE MORGAN
         &.image-1{
             background-image: url(/assets/images/portfolio/portfolio-1.jpg);
         }
@@ -116,10 +117,16 @@
             background-image: url(/assets/images/portfolio/portfolio-2.jpg);
         }
         &.image-3{
-            background-image: url(/assets/images/portfolio/portfolio-1.jpg);
+            background-image: url(/assets/images/portfolio/portfolio-3.jpg);
         }
         &.image-4 {
-            background-image: url(/assets/images/portfolio/portfolio-1.jpg);
+            background-image: url(/assets/images/portfolio/portfolio-4.jpg);
+        }
+        &.image-5 {
+            background-image: url(/assets/images/portfolio/portfolio-5.jpg);
+        }
+        &.test {
+            background-image: url(/assets/images/portfolio/portfolio-6.jpg);
         }
     }
 

@@ -25,11 +25,11 @@ const PortfolioListContent = [
     {
         image: 'image-3',
         category: 'Development',
-        title: 'Getting tickets to the big show'
+        title: 'GettiFFFng tickets to the big show'
     },
     {
-        image: 'image-4',
-        category: 'Development',
+        image: 'image-5',
+        category: 'Development NEW',
         title: 'Getting tickets to the big show'
     }
 ]
@@ -49,8 +49,8 @@ class PortfolioList extends Component{
                             </div>
                             <div className="content">
                                 <div className="inner">
-                                    <p>{value.category}</p>
-                                    <h4><a href="/portfolio-details">{value.title}</a></h4>
+                                    <p style={{fontFamily: 'Brice-Black', fontSize: '40px', color: '#ef5474'}}>{value.category}</p>
+                                    <h4 style={{fontFamily: 'Brice-Light'}}><a href="/portfolio-details">{value.title}</a></h4>
                                     <div className="portfolio-button">
                                         <a className="rn-btn" href="/portfolio-details">View Details</a>
                                     </div>

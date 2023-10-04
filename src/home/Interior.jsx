@@ -57,7 +57,7 @@ const contactAreaStyle = {
  }
 
  const footerBackground ={
-    backgroundColor: '#FF9C00'
+    backgroundColor: '#44494e'
  }
 
 const backgroundStyleService = {
@@ -236,12 +236,12 @@ class InteriorLanding extends Component{
                                     {/* <li><a href="#testimonial">Testimonial</a></li> */}
                                     <li><a href="#team">Team</a></li>
                                     <li><a href="#contact">Contact</a></li>
-                                    <li><a href="portfolio" style={{ fontFamily: 'Brice-Black'}}>Catalog</a></li> 
+                                    <li><a href="/portfolio" style={{ fontFamily: 'Brice-Black'}}>Catalog</a></li> 
                                     
                                 </Scrollspy>
                             </nav>
                             <div className="header-btn">
-                                <a className="rn-btn" href="#catalog">
+                                <a className="rn-btn" href="/portfolio">
                                     <span style={{ fontFamily: 'Brice-Black'}}>Shop Now</span>
                                 </a>
                             </div>
@@ -333,7 +333,7 @@ class InteriorLanding extends Component{
                             <div className="col-lg-8">
                                 <div className="feature-area">
                                     <span style={{ color: '#ef5474', fontFamily: 'Brice-Black', fontSize: '45px'}}>Wholesale Custom Gear</span>
-                                    <h3 className="title mt--20 fontWeight500 lineheight--1-8">ATX Float is a team of product developers & designers, graphic artists, sales managers, and distribution personnel. The product design and management team office in Austin Texas, and warehousing and distribution is based in New Braunfels Texas.</h3>
+                                    <h3 className="title mt--20 fontWeight500 lineheight--1-8" style={{color: 'black', fontFamily: 'Brice-Light'}}>ATX Float is a team of product developers & designers, graphic artists, sales managers, and distribution personnel. The product design and management team office in Austin Texas, and warehousing and distribution is based in New Braunfels Texas.</h3>
                                 </div>
                             </div>
                         </div>
@@ -359,8 +359,9 @@ class InteriorLanding extends Component{
                 {/* End Service Area  */} 
 
                 {/* Start Call To Action Area  */}
-                <div style={amandaBkGround} className="call-to-action-wrapper call-to-action bg_image bg_image-36 text-white-wrapper ptb--180 ptb_lg--80 ptb_md--80 ptb_sm--80" id="getstart" >
-                    {/*  style={amandaBkGround} */}
+                {/*  style={amandaBkGround} */}
+                {/* <div style={amandaBkGround} className="call-to-action-wrapper call-to-action bg_image bg_image-36 text-white-wrapper ptb--180 ptb_lg--80 ptb_md--80 ptb_sm--80" id="getstart" >
+                    
                     <div className="container">
                         <div className="row">
                         <div className="col-lg-4"></div>
@@ -368,12 +369,12 @@ class InteriorLanding extends Component{
                                 <div className="inner text-right" style={{ paddingBottom: '40px' }}>
                                     <span>Shop Around</span>
                                     <h2>Take a look at <br/>our catalog</h2>
-                                    <a className="rn-button-style--2 mt-d-70 mt_sm--30 mt_md--30" href="#catalog"><span>Shop</span></a>
+                                    <a className="rn-button-style--2 mt-d-70 mt_sm--30 mt_md--30" href="/portfolio"><span>Shop</span></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 {/* End Call To Action Area  */}
 
 
@@ -386,17 +387,20 @@ class InteriorLanding extends Component{
                 {/* End CounterUp Area */}
 
                 {/* Start Content Box  */}
-                <div className="rn-content-box-area rn-content-box-style--1 pb--120 bg_color--1" id="about" style={{backgroundColor: '#f3edd1', paddingTop: '10px' }}>
-                    <div className="row row--0 align-items-center">
-                        <div className="col-lg-12 col-xl-4">
-                            <div className="thumbnail">
+                <div className="rn-content-box-area rn-content-box-style--1 pb--120 bg_color--1" id="about" style={{backgroundColor: '#f3edd1', paddingTop: '70px' }}>
+                    <div className="row row--0 align-items-center" >
+                        {/* <br/><br/><br/> */}
+                        {/* <div className="col-lg-12 col-xl-4"> */}
+                        {/* <div className="col-xl-4"> */}
+                            {/* <div className="thumbnail"> */}
                                 {/* <img src="/assets/images/featured/featured-01.jpg" alt="Featured Images"/> */}
-                                <img src="/assets/images/about/IMG_6294.png" alt="Featured Images"/>
+                                {/* <img src="/assets/images/about/IMG_6294.png" alt="Featured Images"/> */}
                                 {/* /assets/images/featured/featured-01.jpg
                                /assets/images/about/IMG_6294.png */}
-                            </div>
-                        </div>
-                        <div className="col-lg-12 col-xl-6">
+                            {/* </div> */}
+                        {/* </div> */}
+                        {/* <div className="col-lg-12 col-xl-6"> */}
+                        <div className="col-xl-12">
                         {/* mt_lg--50 mt_md--30 mt_sm--30 */}
                             <div className="content">
                                 {/* <p className="subtitle"><span>Modern</span> Design For Interior</p> */}
@@ -430,7 +434,7 @@ class InteriorLanding extends Component{
                                     
                                 </div>
                             </div>
-                            <TeamOne column="col-lg-3 col-md-6 col-sm-6 col-12" teamStyle="team-style--bottom" item="4" />
+                            <TeamOne column="col-lg-3 col-md-6 col-sm-6 col-12" teamStyle="team-style--bottom" item="3" />
                         </div>
                     </div>
                 </div>
@@ -450,19 +454,19 @@ class InteriorLanding extends Component{
                 </div>
 
                                 {/* Start Contact Top Area  */}
-                                <div className="rn-contact-top-area ptb--120 bg_color--5" style={footerBackground}>
+                <div className="rn-contact-top-area ptb--120 bg_color--5" style={footerBackground}>
                     <div className="container">
                        
                         <div className="row">
                             {/* Start Single Address  */}
                             <div className="col-lg-4 col-md-6 col-sm-6 col-12">
-                                <div className="rn-address" style={{ backgroundColor: '#7ADEE2'}}>
+                                <div className="rn-address" style={{ backgroundColor: '#f3edd1'}}>
                                     <div className="icon" style={{ color: '#EF5474'}}>
                                         <FiHeadphones />
                                     </div>
                                     <div className="inner">
-                                        <h4 className="title">Call Us!</h4>
-                                        <p><a href="tel:+1-512-210-5959">1-512-210-5959</a></p><br/>
+                                        <h4 style={{ fontFamily: 'Brice-Black', fontSize: '30px',  color: '#EF5474',}} className="title">Call Us!</h4>
+                                        <p><a style={{ fontFamily: 'Brice-Light'}}  href="tel:+1-512-210-5959">1-512-210-5959</a></p><br/>
                                         {/* <p><a href="tel:+856 325 652 984">+856 325 652 984</a></p> */}
                                     </div>
                                 </div>
@@ -471,13 +475,13 @@ class InteriorLanding extends Component{
 
                             {/* Start Single Address  */}
                             <div className="col-lg-4 col-md-6 col-sm-6 col-12 mt_mobile--50">
-                                <div className="rn-address" style={{ backgroundColor: '#7ADEE2'}}>
+                                <div className="rn-address" style={{ backgroundColor: '#f3edd1'}}>
                                     <div className="icon" style={{ color: '#EF5474'}}>
                                         <FiMail />
                                     </div>
                                     <div className="inner">
-                                        <h4 className="title">Email Address</h4>
-                                        <p><a href="mailto:team@atxfloat.com">team@atxfloat.com</a></p><br/>
+                                        <h4 style={{ fontFamily: 'Brice-Black', fontSize: '30px',  color: '#EF5474',}}  className="title">Email Address</h4>
+                                        <p><a style={{ fontFamily: 'Brice-Light'}} href="mailto:team@atxfloat.com" target="_blank">team@atxfloat.com</a></p><br/>
                                         {/* <p><a href="mailto:example@gmail.com">example@gmail.com</a></p> */}
                                     </div>
                                 </div>
@@ -486,15 +490,15 @@ class InteriorLanding extends Component{
 
                             {/* Start Single Address  */}
                             <div className="col-lg-4 col-md-6 col-sm-6 col-12 mt_md--50 mt_sm--50">
-                                <div className="rn-address" style={{ backgroundColor: '#7ADEE2'}}>
+                                <div className="rn-address" style={{ backgroundColor: '#f3edd1'}}>
                                     <div className="icon" style={{ color: '#EF5474'}}>
                                         <FiMapPin />
                                     </div>
                                     <div className="inner">
-                                        <h4 className="title">Location</h4>
+                                        <h4 style={{ fontFamily: 'Brice-Black', fontSize: '30px',  color: '#EF5474',}}  className="title">Location</h4>
                                         
 
-                                        <p>411 W Monroe St<br /> Austin, TX 78704</p>
+                                        <p style={{ fontFamily: 'Brice-Light'}}>411 W Monroe St<br /> Austin, TX 78704</p>
                                     </div>
                                 </div>
                             </div>
@@ -511,9 +515,9 @@ class InteriorLanding extends Component{
                 {/* End Footer Style  */}
 
                 {/* Start Back To Top */}
-                <div className="backto-top">
+                <div className="backto-top" >
                     <ScrollToTop showUnder={160}>
-                        <FiChevronUp />
+                        <FiChevronUp style={{ color: '#EF5474'}}/>
                     </ScrollToTop>
                 </div>
                 {/* End Back To Top */}

@@ -2,10 +2,12 @@ import React, { Component } from "react";
 import {FaTwitter ,FaInstagram ,FaFacebookF , FaLinkedinIn} from "react-icons/fa";
 
 const SocialShare = [
-    {Social: <FaFacebookF /> , link: 'https://www.facebook.com/'},
-    {Social: <FaLinkedinIn /> , link: 'https://www.linkedin.com/'},
-    {Social: <FaInstagram /> , link: 'https://www.instagram.com/'},
-    {Social: <FaTwitter /> , link: 'https://twitter.com/'},
+    // {Social: <FaFacebookF /> , link: 'https://www.facebook.com/atxfloat/'},
+    {Social: <FaFacebookF /> , link: 'www.facebook.com/atxfloat/'},
+    // {Social: <FaLinkedinIn /> , link: 'https://www.linkedin.com/'},
+    // {Social: <FaInstagram /> , link: 'https://www.instagram.com/atx.float/'},
+    {Social: <FaInstagram /> , link: 'www.instagram.com/atx.float/'},
+    // {Social: <FaTwitter /> , link: 'https://twitter.com/'},
 ]
 
 
@@ -28,7 +30,7 @@ class Footer extends Component{
 }}>
                                     <div className="inner">
                                         <span style={{fontFamily: 'Brice-Light'}}>Ready To Do This</span>
-                                        <h2>Let's get <br /> to work</h2>
+                                        <h2>Let's get <br /> Started!!</h2>
                                         <a className="rn-button-style--2" href="/contact">
                                             <span>Contact Us</span>
                                         </a>
@@ -43,8 +45,8 @@ class Footer extends Component{
                                             <div className="footer-link" style={{fontFamily: 'Brice-Light'}}>
                                                 <h4 style={{fontFamily: 'Brice-Light', color: 'white'}}>Quick Link</h4>
                                                 <ul className="ft-link">
-                                                    <li><a href="/portfolio">Work</a></li>
-                                                    <li><a href="/about">About</a></li>
+                                                    <li><a href="/">Home</a></li>
+                                                    {/* <li><a href="/about">About</a></li> */}
                                                     <li><a href="/contact">Let's Talk</a></li>
                                                 </ul>
                                             </div>
@@ -55,14 +57,14 @@ class Footer extends Component{
                                             <div className="footer-link">
                                                 <h4 style={{fontFamily: 'Brice-Light', color: 'white'}}>Say Hello</h4>
                                                 <ul className="ft-link">
-                                                    <li style={{fontFamily: 'Brice-Light'}}><a href="mailto:admin@example.com">admin@example.com</a></li>
-                                                    <li style={{fontFamily: 'Brice-Light'}}><a href="mailto:hr@example.com">hr@example.com</a></li>
+                                                    <li style={{fontFamily: 'Brice-Light'}}><a href="mailto:admin@example.com">team@atxfloat.com</a></li>
+                                                    <li style={{fontFamily: 'Brice-Light'}}><a href="tel:+1-512-210-5959">1-512-210-5959</a></li>
                                                 </ul>
 
                                                 <div className="social-share-inner">
                                                     <ul className="social-share social-style--2 d-flex justify-content-start liststyle mt--15">
                                                         {SocialShare.map((val , i) => (
-                                                            <li key={i}><a href={`${val.link}`}>{val.Social}</a></li>
+                                                            <li key={i}><a href={`${val.link}`} target="_blank">{val.Social}</a></li>
                                                         ))}
                                                     </ul>
                                                 </div> 

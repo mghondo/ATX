@@ -1,11 +1,11 @@
 import React from "react";
-import { FaFacebookF , FaLinkedinIn , FaTwitter } from "react-icons/fa";
+import { FaFacebookF , FaLinkedinIn , FaTwitter, FaInstagram } from "react-icons/fa";
 
 let data = [
     {
         images: '01',
-        title: 'Jone Due',
-        designation: 'Sr. Web Developer',
+        title: 'Zach Martin',
+        designation: 'President',
         socialNetwork: [
             {
                 icon: <FaFacebookF />,
@@ -16,15 +16,19 @@ let data = [
                 url: '#'
             },
             {
-                icon: <FaTwitter />,
+                icon: <FaInstagram />,
                 url: '#'
             },
+            // {
+            //     icon: <FaTwitter />,
+            //     url: '#'
+            // },
         ]
     },
     {
         images: '02',
-        title: 'Fatima Asrafi',
-        designation: 'Front-end Engineer',
+        title: 'Jay Perry',
+        designation: 'Lead Sales',
         socialNetwork: [
             {
                 icon: <FaFacebookF />,
@@ -38,21 +42,21 @@ let data = [
     },
     {
         images: '03',
-        title: 'John Dou',
-        designation: 'Sr. Graphic Designer',
+        title: 'Morgan Hondros',
+        designation: 'Lead Web Architech',
         socialNetwork: [
             {
                 icon: <FaFacebookF />,
-                url: '#'
+                url: 'https://www.facebook.com/morgan.hondros'
             },
             {
                 icon: <FaLinkedinIn />,
-                url: '#'
+                url: 'https://www.linkedin.com/in/morgan-hondros-781878151/'
             },
-            {
-                icon: <FaTwitter />,
-                url: '#'
-            },
+            // {
+            //     icon: <FaTwitter />,
+            //     url: '#'
+            // },
         ]
     },
     {
@@ -68,10 +72,10 @@ let data = [
                 icon: <FaLinkedinIn />,
                 url: '#'
             },
-            {
-                icon: <FaTwitter />,
-                url: '#'
-            },
+            // {
+            //     icon: <FaTwitter />,
+            //     url: '#'
+            // },
         ]
     },
     {
@@ -102,10 +106,10 @@ let data = [
                 icon: <FaLinkedinIn />,
                 url: '#'
             },
-            {
-                icon: <FaTwitter />,
-                url: '#'
-            },
+            // {
+            //     icon: <FaTwitter />,
+            //     url: '#'
+            // },
         ]
     },
     {
@@ -121,10 +125,10 @@ let data = [
                 icon: <FaLinkedinIn />,
                 url: '#'
             },
-            {
-                icon: <FaTwitter />,
-                url: '#'
-            },
+            // {
+            //     icon: <FaTwitter />,
+            //     url: '#'
+            // },
         ]
     },
     {
@@ -140,10 +144,10 @@ let data = [
                 icon: <FaLinkedinIn />,
                 url: '#'
             },
-            {
-                icon: <FaTwitter />,
-                url: '#'
-            },
+            // {
+            //     icon: <FaTwitter />,
+            //     url: '#'
+            // },
         ]
     },
     {
@@ -159,10 +163,10 @@ let data = [
                 icon: <FaLinkedinIn />,
                 url: '#'
             },
-            {
-                icon: <FaTwitter />,
-                url: '#'
-            },
+            // {
+            //     icon: <FaTwitter />,
+            //     url: '#'
+            // },
         ]
     },
     {
