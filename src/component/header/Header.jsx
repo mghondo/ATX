@@ -5,7 +5,8 @@ import { FiX , FiMenu } from "react-icons/fi";
 
 
 const headerStyle = {
-    backgroundImage: `url('/assets/images/IMG_6288.png')`,
+    // backgroundImage: `url('/assets/images/IMG_6288.png')`,
+    backgroundImage: `url('/assets/images/blog/ZachandJay.jpg')`,
   };
 class Header extends Component{
     constructor(props) {
@@ -130,6 +131,7 @@ class Header extends Component{
                                     </ul>
                                 </li> */}
                                 <li><Link to="/contact" >Contact</Link></li>
+                                <li><Link to="/portfolio">Catalog</Link></li>
                             </ul>
                         </nav>
                         <div className="header-btn">

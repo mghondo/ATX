@@ -6,6 +6,7 @@ import { FiChevronUp } from "react-icons/fi";
 import Header from "../component/header/Header";
 import Footer from "../component/footer/Footer";
 import ContactThree from "../elements/contact/ContactThree";
+import Breadcrumb2_0 from '../elements/common/BreadCrumb2.0';
 
 const ContactForm = () => {
     return (
@@ -17,7 +18,13 @@ const ContactForm = () => {
             {/* End Header Area  */}
             
             {/* Start Breadcrump Area */}
-            <Breadcrumb title={'Contact Form'}   />
+            {/* <Breadcrumb title={'Contact Form'}   /> */}
+            <Breadcrumb2_0
+        title="Page Title"
+        parent="Parent Page"
+        backgroundImage="/assets/images/blog/ZachandJay.jpg"
+        dataBlackOverlay={8}
+      />
             {/* End Breadcrump Area */}
 
             {/* Start Page Wrapper  */}

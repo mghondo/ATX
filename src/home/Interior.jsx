@@ -11,6 +11,9 @@ import Slider from "react-slick";
 import { slickDot , portfolioSlick2 } from "../page-demo/script";
 import ContactTwo from "../elements/contact/ContactTwo";
 import { FiHeadphones , FiMail , FiMapPin } from "react-icons/fi";
+import ServiceList from '../elements/service/ServiceList'
+
+// /elements/service/ServiceList.jsx
 
 
 
@@ -19,7 +22,7 @@ const SlideList = [
         textPosition: 'text-center',
         category: '',
         title: 'ATX Float',
-        description: 'There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration.',
+        description: 'Dive into success with our water sports wholesale company, where quality meets adventure for businesses seeking top-notch products.',
         buttonText: 'Shop Now!',
         // buttonLink: '/contact'
         buttonLink: 'portfolio'
@@ -232,10 +235,10 @@ class InteriorLanding extends Component{
                                     {/* <li><a href="#service">Service</a></li>
                                     <li><a href="#getstart">Get Start</a></li>
                                     <li><a href="#about">About</a></li> */}
-                                    <li><a href="#about">About</a></li> 
+                                    <li><a href="/about">About</a></li> 
                                     {/* <li><a href="#testimonial">Testimonial</a></li> */}
-                                    <li><a href="#team">Team</a></li>
-                                    <li><a href="#contact">Contact</a></li>
+                                    {/* <li><a href="#team">Team</a></li> */}
+                                    <li><a href="/contact">Contact</a></li>
                                     <li><a href="/portfolio" style={{ fontFamily: 'Brice-Black'}}>Catalog</a></li> 
                                     
                                 </Scrollspy>
@@ -270,9 +273,9 @@ class InteriorLanding extends Component{
                                 
                                             <div className={`inner ${value.textPosition}`}>
                                                 {value.category ? <span>{value.category}</span> : ''}
-                                                {value.title ? <h1 className="title theme-gradient">{value.title}</h1> : ''}
-                                                {value.description ? <p style={{ fontFamily: 'Brice-Light' }} className="description">{value.description}</p> : ''}
-                                                {value.buttonText ? <div  style={{ fontFamily: 'Brice-Light' }}className="slide-btn"><a className="rn-button-style--2 btn-primary-color" href={`${value.buttonLink}`} >{value.buttonText}</a></div> : ''}
+                                                {value.title ? <h1 className="title" style={{fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}}>{value.title}</h1> : ''}
+                                                {value.description ? <p style={{ fontFamily: 'Brice-Light', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }} className="description">{value.description}</p> : ''}
+                                                {value.buttonText ? <div className="slide-btn"><a style={{fontFamily: 'Brice-Black', fontSize:'30px', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}}  className="rn-button-style--2 btn-primary-color" href={`${value.buttonLink}`} >{value.buttonText}</a></div> : ''}
                                                 {/* href={`${value.buttonLink}`} */}
                                             </div>
                                         </div>
@@ -291,7 +294,7 @@ class InteriorLanding extends Component{
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="section-title text-left service-style--3 mb--30">
-                                    <h2 style={{ fontFamily: 'Brice-Black', color: '#ef5474'}} className="title text-center">Park Tubes, River Tubes and More</h2>
+                                    <h2 style={{ fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}} className="title text-center">Park Tubes, River Tubes and More</h2>
                                     <p style={{ fontFamily: 'Brice-Light' }} className="text-center">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
                                 </div>
                             </div>
@@ -327,35 +330,7 @@ class InteriorLanding extends Component{
                 {/* End Portfolio Area */}
 
                 {/* Start Service Area  */}
-                <div className="service-area creative-service-wrapper ptb--120 bg_color--1" style={{backgroundColor: '#f3edd1', padding: '10px'}} id="service">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-8">
-                                <div className="feature-area">
-                                    <span style={{ color: '#ef5474', fontFamily: 'Brice-Black', fontSize: '45px'}}>Wholesale Custom Gear</span>
-                                    <h3 className="title mt--20 fontWeight500 lineheight--1-8" style={{color: 'black', fontFamily: 'Brice-Light'}}>ATX Float is a team of product developers & designers, graphic artists, sales managers, and distribution personnel. The product design and management team office in Austin Texas, and warehousing and distribution is based in New Braunfels Texas.</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row service-one-wrapper mt--30">
-                            {ServiceListOne.map( (val , i) => (
-                                <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12" key={i}>
-                                    <a href="/service-details">
-                                        <div className="service service__style--1">
-                                            <div className="icon">
-                                                {/* <img src={`/assets/images/icons/${val.icon}`} alt="Service Icon"/> */}
-                                            </div>
-                                            <div className="content">
-                                                <h4 style={{ color: '#ef5474', fontFamily: 'Brice-Black'}} className="title">{val.title}</h4>
-                                                <p style={{ color: '#423f39', fontFamily: 'Brice-Light' }}>{val.description}</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>  
+
                 {/* End Service Area  */} 
 
                 {/* Start Call To Action Area  */}
@@ -386,39 +361,32 @@ class InteriorLanding extends Component{
                 </div> */}
                 {/* End CounterUp Area */}
 
-                {/* Start Content Box  */}
-                <div className="rn-content-box-area rn-content-box-style--1 pb--120 bg_color--1" id="about" style={{backgroundColor: '#f3edd1', paddingTop: '70px' }}>
-                    <div className="row row--0 align-items-center" >
-                        {/* <br/><br/><br/> */}
-                        {/* <div className="col-lg-12 col-xl-4"> */}
-                        {/* <div className="col-xl-4"> */}
-                            {/* <div className="thumbnail"> */}
-                                {/* <img src="/assets/images/featured/featured-01.jpg" alt="Featured Images"/> */}
-                                {/* <img src="/assets/images/about/IMG_6294.png" alt="Featured Images"/> */}
-                                {/* /assets/images/featured/featured-01.jpg
-                               /assets/images/about/IMG_6294.png */}
-                            {/* </div> */}
-                        {/* </div> */}
-                        {/* <div className="col-lg-12 col-xl-6"> */}
-                        <div className="col-xl-12">
-                        {/* mt_lg--50 mt_md--30 mt_sm--30 */}
-                            <div className="content">
-                                {/* <p className="subtitle"><span>Modern</span> Design For Interior</p> */}
-                                <h2 className="fontWeight500" style={{ color: '#EF5474', fontFamily: 'Brice-Black' }}>How We Started</h2>
-                                <p> Founded by Zachary Martin in 2013, ATX Float was born on the rivers in Central Texas. While running another product development company called Product Creations Group and living in Austin Texas, Zach spent much of the summers on the rivers in San Marcos Texas and New Braunfels Texas. <br/><br/>After realizing a significant need for better equipment and gear, Zach began developing river tubes, waterproof phone pouches, dry bags, and other waterproof gear that replaced the old black tire inner tubes and other tired old products used and discarded in the rivers. The new colorful tubes and products have added value to river patrons and enhanced the beauty of the rivers by changing the visual landscape of tubes floating down the river while allowing the river operators to customize their branding and equipment to better serve their river patrons.
-                                <br/><br/>As the river supply grew, Zach expanded the team and product line serving waterparks, beaches, marinas, and retailers while giving the watersport supply operation its own brand name and life under ATX Float. 
-                                <br/><br/>ATX Float now supplies wholesale tubes and products to Waterparks, River Outfitters, Marinas, Beach Shops, and retailers all around the USA and abroad. </p>
-                                {/* <ul className="list-style mt--30">
-                                    <li>Yet this above sewed flirted opened ouch</li>
-                                    <li>Goldfinch realistic sporadic ingenuous</li>
-                                    <li>Abominable this abidin far successfully then like piquan</li>
-                                    <li>Risus commodo viverra</li>
-                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing</li>
-                                </ul> */}
+                <div id="service" className="fix">
+                <div className="service-area creative-service-wrapper ptb--120 bg_color--5" style={{backgroundColor: '#f3edd1',}} >
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-12">
+                                {/* <div className="section-title text-center service-style--3 mb--30 mb_sm--0">
+                                    <h2 className="title" style={{ color: '#ef5474', fontFamily: 'Brice-Black', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)',}}>My Awesome Service</h2>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+                                </div> */}
+                                <div className="feature-area" style={{textAlign: 'center'}}>
+                                    <span style={{ color: '#ef5474', fontFamily: 'Brice-Black', fontSize: '45px', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}}>Wholesale Custom Gear</span>
+                                    <h3 className="title mt--20 fontWeight500 lineheight--1-8" style={{color: 'black', fontFamily: 'Brice-Light'}}>ATX Float is a team of product developers & designers, graphic artists, sales managers, and distribution personnel. The product design and management team office in Austin Texas, and warehousing and distribution is based in New Braunfels Texas.</h3>
+                                </div>
                             </div>
-                        </div> 
+                        </div>
+                        <div className="row creative-service">
+                            <div className="col-lg-12">
+                                <ServiceList item="6" column="col-lg-4 col-md-6 col-sm-6 col-12 text-left" />
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </div>  
+            </div>
+
+                {/* Start Content Box  */}
+
                 {/* End Content Box  */}
 
                 {/* Start Team Area  */}

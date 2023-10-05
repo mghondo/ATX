@@ -8,6 +8,7 @@ import ScrollToTop from 'react-scroll-up';
 import { FiChevronUp } from "react-icons/fi";
 import Header from "../component/header/Header";
 import Footer from "../component/footer/Footer";
+import Breadcrumb2_0 from "./common/BreadCrumb2.0";
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 const footerBackground ={
@@ -35,7 +36,7 @@ class Contact extends Component{
 
                  {/* Start Breadcrump Area bg_image--17 */}
                  {/* trydo/public/assets/images/logo/ATX_Float_Logo 2/ATX-Float-Logo.jpg */}
-                 <div className="rn-page-title-area pt--120 pb--190 bg_image "   style={{
+                 {/* <div className="rn-page-title-area pt--120 pb--190 bg_image "   style={{
     backgroundImage: `url('/assets/images/logo/ATX_Float_Logo%202/ATX-Float-Logo.jpg')`,
   }}  data-black-overlay="6">
                     <div className="container">
@@ -48,7 +49,13 @@ class Contact extends Component{
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
+                            <Breadcrumb2_0
+        title="Contact Us"
+        parent=""
+        backgroundImage="/assets/images/blog/ZachandJay.jpg"
+        dataBlackOverlay={4}
+      />
                 {/* End Breadcrump Area */}
                 <div className="rn-contact-top-area ptb--120 bg_color--5" style={{backgroundColor: '#f3edd1'}}>
                     <div className="container">
@@ -116,13 +123,12 @@ class Contact extends Component{
 
                 {/* Start Contact Map  */}
                 <div className="rn-contact-map-area position-relative" style={{ backgroundColor: '#f3edd1', paddingTop: '40px' }}>
-  <div style={{ height: '500px', width: '100%' }}>
+                    
+  <div style={{ height: '500px', width: '50%', display: 'none'}}>
     <GoogleMapReact
       defaultCenter={this.props.center}
       defaultZoom={this.props.zoom}
-    //   bootstrapURLKeys={{
-    //     key: 'YOUR_API_KEY_HERE', // Replace with your actual API key
-    //   }}
+
     >
       <AnyReactComponent
         lat={30.2672} // Austin, TX latitude

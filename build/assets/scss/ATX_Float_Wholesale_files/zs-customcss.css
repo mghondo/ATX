@@ -1,0 +1,153 @@
+ h2 {
+     vertical-align: center;
+     text-align: center;
+}
+ html, body {
+     margin: 0;
+     height: auto;
+     background: url(https://svgur.com/i/i7g.svg) repeat center center fixed;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+}
+.contactusbox {
+  border-radius: 15px 50px;
+  background: purple;
+  padding: 12px;
+  margin: 54px;
+  background-position: center top;
+    background-image: linear-gradient(180deg,rgb(0,150,255) 0%,rgba(0,150,255,.4) 100%),url(https://atxfloat.com/wp-content/uploads/2019/10/wholesale-tubes-background.jpg);
+    background-color: #ffffff;
+}
+ .theme-product-box-container {
+background-color: rgba(76, 175, 80, 0.0);
+}
+ .theme-product-overlay-link {
+background-color: rgba(76, 175, 80, 0.0);
+}
+.zpdark-header-portion.theme-header-topbar {
+    background: rgb(71, 179, 255);
+}
+.theme-section-heading {
+    display: none;
+}
+ #menu-toggle {
+     display: none;
+}
+ nav a {
+     text-decoration: none;
+     color: #FFFFFF;
+     text-transform: uppercase;
+}
+ .top-nav {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-between;
+     background-color: #ffffff;
+     font-family: "Montserrat";
+     box-sizing: border-box;
+     color: #ffffff;
+     text-decoration: none;
+     background-image: url("https://i.ibb.co/tH34br2/topbar-bg-1.png");
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     color: #FFF;
+     height: 68px;
+     padding: 1em;
+}
+ .menu {
+     display: flex;
+     flex-direction: row;
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     text-decoration: none;
+     position: relative;
+     color: #ffffff;
+     text-transform: uppercase;
+}
+ .menu > li {
+     margin: auto;
+     overflow: hidden;
+}
+.theme-header-topbar {
+    right: 0;
+    width: 100%;
+    z-index: 250;
+    padding-block-start: 1px;
+    padding-block-end: 1px;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    background: #F5F4F2;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 13px;
+    color: #2BB2D4;
+}
+.zpdark-section h1 {
+    color: #FFFFFF;
+    overflow-wrap: normal;
+}
+.theme-header .zpcontainer {
+    display: none;
+}
+ @media (max-width: 420px) {
+     .menu-button-container {
+         display: none;
+    }
+     .menu {
+         position: absolute;
+         top: 0;
+         margin-top: 50px;
+         left: 0;
+         flex-direction: column;
+         width: 100%;
+         justify-content: center;
+         align-items: center;
+    }
+     .logo-box a {
+         outline: none;
+         display: block;
+    }
+     .logo-box img {
+         display: block;
+    }
+     nav {
+         overflow: hidden;
+    }
+     ul {
+         list-style: none;
+         margin: 0;
+         padding: 0;
+         float: right;
+    }
+}
+ a:hover {
+     color: white;
+}
+ ::-webkit-scrollbar {
+     width: 12px;
+}
+/* Track */
+ ::-webkit-scrollbar-track {
+     background: rgb(0,150,255);
+     -webkit-border-radius: 3px;
+     border-radius: 3px;
+}
+/* Handle */
+ ::-webkit-scrollbar-thumb {
+     -webkit-border-radius: 3px;
+     border-radius: 3px;
+     background: rgb(255,255,255);
+}
+ ::-webkit-scrollbar-thumb:window-inactive {
+     background: rgb(255,255,255);
+}
+ .zpimage-with-text-container:hover {
+  transform: scale(1.2);
+}
+ @media (max-width: 767px) {
+         .menu {
+             display: none;
+        }
+    }

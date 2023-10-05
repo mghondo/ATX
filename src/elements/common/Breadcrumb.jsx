@@ -7,9 +7,10 @@ class Breadcrumb extends Component{
         return(
             <React.Fragment>
                 <div className="breadcrumb-area rn-bg-color ptb--120 bg_image "     style={{
-      backgroundImage: `url('/assets/images/IMG_6288.png')`, // Use the relative path to your image
+      backgroundImage: `url('/assets/images/blog/ZachandJay.jpg')`, // Use the relative path to your image
+    //   /assets/images/blog/ZachandJay.jpg
       backgroundPosition: '50% 50%', // Set the background position
-    }} data-black-overlay="7">
+    }} data-black-overlay="4">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
