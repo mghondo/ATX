@@ -91,7 +91,7 @@ class About extends Component{
                 {/* End CounterUp Area */}
 
                 {/* Start Finding Us Area  */}
-                <div className="rn-finding-us-area rn-finding-us bg_color--1">
+                <div className="rn-finding-us-area rn-finding-us bg_color--1" style={{backgroundColor: '#f3edd1'}}>
                     <div className="inner">
                         <div className="content-wrapper">
                             <div className="content">
@@ -102,7 +102,11 @@ class About extends Component{
                         </div>
                         <div className="thumbnail">
                             <div className="image">
-                                <img src="/assets/images/IMG_6288.png"  alt="Finding Images"/>
+                                <img src="/assets/images/IMG_6288.png"       style={{
+        // width: '80%', // Set the image width to 80%
+        // maxWidth: '1300px', // Ensure the image doesn't exceed its original size
+        float: 'right', // Align the image to the right side
+      }}  alt="Finding Images"/>
 
                                 {/* trydo/public/assets/images/IMG_6288.png */}
                             </div>
