@@ -131,7 +131,13 @@ class Header extends Component{
                                     </ul>
                                 </li> */}
                                 <li><Link to="/contact" >Contact</Link></li>
-                                <li><Link to="/portfolio">Catalog</Link></li>
+                                <li><Link to="/portfolio">Catalog</Link>
+                                <ul className="submenu">
+                                    <li><a href="/portfolio#riverTubes">River Tubes</a></li>
+                                    <li><a href="/portfolio#parkTubes">Park Tubes</a></li>
+                                    <li><a href="/portfolio#awesomeGear">Awesome Gear</a></li>
+                                </ul>
+                                </li>
                             </ul>
                         </nav>
                         <div className="header-btn">

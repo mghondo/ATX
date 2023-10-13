@@ -57,6 +57,7 @@ import Columns from "./blocks/Columns";
 import PricingTable from "./blocks/PricingTable";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
+import GalleryRiver from "./blocks/GalleryRiver";
 
 class Root extends Component {
   render() {
@@ -234,6 +235,11 @@ class Root extends Component {
               exact
               path={`${process.env.PUBLIC_URL}/gallery`}
               component={Gallery}
+            />
+            <Route
+              exact
+              path={`${process.env.PUBLIC_URL}/galleryriver`}
+              component={GalleryRiver}
             />
             <Route
               exact

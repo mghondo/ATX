@@ -1,7 +1,18 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+
+AOS.init();
+
 class PortfolioListNew extends Component {
+
+  getRandomAOSAnimation() {
+    const animations = ["fade-left", "fade-right", "fade-up", "fade-down"];
+    const randomIndex = Math.floor(Math.random() * animations.length);
+    return animations[randomIndex];
+  }
   render() {
     const { column, styevariation, portfolioItems } = this.props;
 
@@ -10,7 +21,9 @@ class PortfolioListNew extends Component {
         {portfolioItems.map((value, index) => (
 
 
-          <div className={`${column}`} key={index}>
+          <div className={`${column}`} key={index} 
+          data-aos={this.getRandomAOSAnimation()}
+          data-aos-duration="1000">
             <div className={`portfolio ${styevariation}`}>
               <div className="thumbnail-inner">
               {/* <div className={`thumbnail ${value.image}`} style={{ backgroundImage: `url('/assets/images/bg/ATXBanner.jpg')` }}></div> */}

@@ -9,6 +9,12 @@ import ScrollToTop from 'react-scroll-up';
 import { FiChevronUp } from "react-icons/fi";
 import Header from "../component/header/Header";
 import Footer from "../component/footer/Footer";
+import TypingAnimation from "./common/TypingAnimation";
+
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+
+AOS.init();
 
 
 class About extends Component{
@@ -32,6 +38,7 @@ class About extends Component{
                 <Header headertransparent="header--transparent" colorblack="color--black" logoname="logo.png" />
                 {/* Start Breadcrump Area */}
                 <Breadcrumb title={'About'}   />
+                
                 {/* End Breadcrump Area */}
 
                 {/* Start About Area  */}
@@ -42,7 +49,7 @@ class About extends Component{
                                 <div className="col-lg-5">
                                     <div className="thumbnail">
                                         {/* <img className="w-100" src="/assets/images/about/about-3.jpg" alt="About Images"/> */}
-                                        <img className="w-100" src="/assets/images/blog/RiversCentralTexas.png" alt="About Images"/>
+                                        <img className="w-100" src="/assets/images/blog/RiversCentralTexas.png"  alt="About Images"/>
                                         {/* trydo/public/assets/images/blog/RiversCentralTexas.png */}
                                     </div>
                                 </div>
@@ -50,8 +57,8 @@ class About extends Component{
                                     <div className="about-inner inner">
                                         <div className="section-title">
                                             {/* <h2 style={{ fontFamily: 'Brice-Black', color: '#ef5474'}}className="title">{title}</h2> */}
-                                            <h2 style={{ fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}}className="title">ATX Float</h2>
-                                            <p className="description" style={{ fontFamily: 'Brice-Light',}}>{description}</p>
+                                            <h2 style={{ fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}} data-aos="fade-left" data-aos-duration="1000" className="title">ATX Float</h2>
+                                            <p className="description" style={{ fontFamily: 'Brice-Light',}} data-aos="fade-left" data-aos-duration="1000">{description}</p>
                                         </div>
                                         {/* <div className="row mt--30">
                                             <div className="col-lg-6 col-md-12 col-sm-12 col-12">
@@ -93,9 +100,10 @@ class About extends Component{
                 {/* Start Finding Us Area  */}
                 <div className="rn-finding-us-area rn-finding-us bg_color--1" style={{backgroundColor: '#f3edd1'}}>
                     <div className="inner">
-                        <div className="content-wrapper">
-                            <div className="content">
-                                <h4 style={{fontFamily: 'Brice-Black', color: '#ef5474'}} className="theme-gradient" >Find what you need to take your venue to the next level!!!</h4>
+                        <div className="content-wrapper" >
+                            <div className="content" data-aos="fade-left" data-aos-duration="1000">
+                                <TypingAnimation elementType="h4"
+        typingSpeed={50} style={{fontFamily: 'Brice-Black', color: '#54eeef'}} className="theme-gradient" text="Find what you need to take your venue to the next level!!!" />
                                 <p>Go one step ahead with Every Order! ATX Float is your gateway to a world of water fun, delivering quality products to venues and providers nationwide. Dive into Success with Us!"</p>
                                 <a style={{fontFamily: 'Brice-Black', color: '#ef5474'}} className="rn-btn btn-white" href="/portfolio">Catalog</a>
                             </div>
@@ -122,7 +130,7 @@ class About extends Component{
                         <div className="row">
                             
                             {/* Start Single Team  */}
-                            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div className="col-lg-4 col-md-6 col-sm-6 col-12" data-aos="fade-left" data-aos-duration="1000">
                                 <div className="team">
                                     <div className="thumbnail">
                                         <img className="w-100" src="/assets/images/team/team-01.jpg" alt="Blog Images"/>
@@ -141,7 +149,7 @@ class About extends Component{
                             {/* End Single Team  */}
 
                             {/* Start Single Team  */}
-                            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div className="col-lg-4 col-md-6 col-sm-6 col-12" data-aos="fade-down" data-aos-duration="1000">
                                 <div className="team">
                                     <div className="thumbnail">
                                         <img className="w-100" src="/assets/images/team/team-02.jpg" alt="Blog Images"/>
@@ -160,7 +168,7 @@ class About extends Component{
                             {/* End Single Team  */}
 
                             {/* Start Single Team  */}
-                            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div className="col-lg-4 col-md-6 col-sm-6 col-12" data-aos="fade-right" data-aos-duration="1000">
                                 <div className="team">
                                     <div className="thumbnail">
                                         <img className="w-100" src="/assets/images/team/team-03.jpg" alt="Blog Images"/>
@@ -213,8 +221,8 @@ class About extends Component{
 
                 {/* Start Back To Top */}
                 <div className="backto-top">
-                    <ScrollToTop showUnder={160}>
-                        <FiChevronUp />
+                <ScrollToTop showUnder={160}>
+                        <FiChevronUp style={{ color: '#EF5474'}}/>
                     </ScrollToTop>
                 </div>
                 {/* End Back To Top */}

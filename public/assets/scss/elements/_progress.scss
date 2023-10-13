@@ -11,6 +11,8 @@ Progressbar Area
             @extend %fontWeight500;
             margin-bottom: 10px;
         }
+
+        //Where to edit the progress bar, love morgan
         .progress{
             height: 4px;
             border-radius: 4px;
@@ -18,10 +20,10 @@ Progressbar Area
             background-color: #f5f7fd;
             overflow: visible;
             .progress-bar{
-                background-color: #f81f01;
-                background-image: linear-gradient(-224deg,#f81f01 0,#ee076e 100%);
+                background-color: #9ddcf0;
+                background-image: linear-gradient(-224deg,#dbf3f4 0,#69ebf9 100%);
                 position: relative;
-                color: #ee076e;
+                color: #27accd;
             }
         }
 

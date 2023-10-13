@@ -102,7 +102,11 @@
                 margin-bottom: 11px;
             }
             @media #{$large-mobile} {
-                color: #ffffff;
+                // color: #ffffff;
+               
+                    // color: #ffffff;
+                    color: #7afff4;
+              
             }
            svg {
                 stroke-width: 1 !important;
@@ -386,7 +390,8 @@
         }
         
         .icon {
-            color: #ffffff;
+            // color: #ffffff;
+            color: #7afff4;
         }
         .content {
             h3 {

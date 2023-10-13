@@ -10,7 +10,9 @@ import PortfolioList from "../elements/portfolio/PortfolioList";
 import { slickDot , portfolioSlick2 } from "../page-demo/script";
 import {Link} from "react-router-dom";
 import PortfolioListNew from "../elements/portfolio/PortfolioListNew";
+import { Parallax } from "react-parallax";
 
+const image1 = '/assets/images/bg/riverTube2.0.png';
 
 const portfolioItems = [
     {
@@ -61,17 +63,20 @@ const list = [
     {
         image: 'image-1',
         category: 'River Tubes',
-        title: 'Get your custom made river tubes here!!'
+        title: 'Get your custom made river tubes here!!',
+        url: '#riverTubes'
     },
     {
         image: 'image-2',
         category: 'Park Tubes',
-        title: 'Get tubes for your water park here!'
+        title: 'Get tubes for your water park here!',
+        url: '#parkTubes'
     },
     {
         image: 'image-3',
         category: 'Awesome Gear',
-        title: 'Every adventure needs extra gear. Click here'
+        title: 'Every adventure needs extra gear. Click here',
+        url: '#awesomeGear'
     },
     // {
     //     image: 'image-4',
@@ -163,14 +168,16 @@ const Portfolio = () => {
             <main className="page-wrapper">
 
                 {/* Start Portfolio Area */}
-                <div className="portfolio-area pt--90 pb--140 bg_color--1" style={backGroundBrown}>
+                <div className="portfolio-area pt--90 pb--140 bg_color--1" style={backGroundBrown} id="mainMenuBar">
                     <div className="rn-slick-dot">
                         <div className="container">
-                            <div className="row">
+                            <div className="row" data-aos="fade-up" data-aos-duration="750" >
                                 <div className="col-lg-12">
                                 <div className="section-title text-center service-style--3 mb--30">
-                                        <h2 style={{fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}} className="title">Park Tubes, River Tubes and More!!!</h2>
+                                    {/* <Parallax bgImage={image1} strength={800} style={{padding: '70px',}}> */}
+                                        <h2 style={{fontFamily: 'Brice-Black', color: '#ef5474', textShadow: `2px 2px 4px rgba(0, 0, 0, 0.6)`}} data-aos="fade-up" data-aos-duration="750" className="title">Park Tubes, River Tubes and More!!!</h2>
                                         {/* <p>Our main categories of products are below.</p> */}
+                                        {/* </Parallax> */}
                                     </div>
                                     <div className="slick-space-gutter--15 slickdot--20">
                                         <Slider {...slickDot}>
@@ -185,7 +192,7 @@ const Portfolio = () => {
                                                             <p style={{fontFamily: 'Brice-Black', fontSize: '40px', color: '#ef5474'}}>{value.category}</p>
                                                             <h4 style={{fontFamily: 'Brice-Light'}}><a href="/portfolio-details">{value.title}</a></h4>
                                                             <div className="portfolio-button">
-                                                                <a style={{fontFamily: 'Brice-Black'}} className="rn-btn" href="/portfolio-details">See More!</a>
+                                                                <a style={{fontFamily: 'Brice-Black'}} className="rn-btn" href={value.url}>See More!</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -203,15 +210,17 @@ const Portfolio = () => {
 
 
                 {/* Start Portfolio Area */}
-                <div className="portfolio-area ptb--120 bg_color--5"  style={backGroundBrown}>
+                <div className="portfolio-area ptb--120 bg_color--5" id='riverTubes' style={backGroundBrown}>
                     <div className="portfolio-sacousel-inner">
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12">
+                                <Parallax bgImage={image1} strength={800} style={{padding: '70px',}}>
                                     <div className="section-title text-center service-style--3 mb--30">
-                                        <h2 style={{fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}} className="title">River Tubes</h2>
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+                                        <h2 style={{fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}} data-aos="fade-up" data-aos-duration="750"  className="title">River Tubes</h2>
+                                        <p style={{color:'white', fontFamily: 'Brice-Light'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
                                     </div>
+                                    </Parallax>
                                 </div>
                             </div>
                             <div className="row">
@@ -229,15 +238,17 @@ const Portfolio = () => {
                 </div>
                 {/* End Portfolio Area */}
 
-                <div className="portfolio-area ptb--120 bg_color--5"  style={backGroundBrown}>
+                <div className="portfolio-area ptb--120 bg_color--5" id="parkTubes" style={backGroundBrown}>
                     <div className="portfolio-sacousel-inner">
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12">
+                                <Parallax bgImage={image1} strength={800} style={{padding: '70px',}}>
                                     <div className="section-title text-center service-style--3 mb--30">
-                                        <h2 style={{fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}} className="title">Park Tubes</h2>
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+                                        <h2 style={{fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}} data-aos="fade-up" data-aos-duration="750"  className="title">Park Tubes</h2>
+                                        <p style={{color:'white', fontFamily: 'Brice-Light'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
                                     </div>
+                                    </Parallax>
                                 </div>
                             </div>
                             <div className="row">
@@ -255,15 +266,17 @@ const Portfolio = () => {
                 </div>
                 {/* End Portfolio Area */}
 
-                <div className="portfolio-area ptb--120 bg_color--5"  style={backGroundBrown}>
+                <div className="portfolio-area ptb--120 bg_color--5" id="awesomeGear" style={backGroundBrown}>
                     <div className="portfolio-sacousel-inner">
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12">
+                                <Parallax bgImage={image1} strength={800} style={{padding: '70px',}}>
                                     <div className="section-title text-center service-style--3 mb--30">
-                                        <h2 style={{fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}} className="title">Awesome Gear</h2>
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+                                        <h2 style={{fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}} className="title" data-aos="fade-up" data-aos-duration="750" >Awesome Gear</h2>
+                                        <p style={{color:'white', fontFamily: 'Brice-Light'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
                                     </div>
+                                    </Parallax>
                                 </div>
                             </div>
                             <div className="row">
@@ -283,31 +296,7 @@ const Portfolio = () => {
 
 
 
-                <div className="portfolio-area ptb--120 bg_color--5"  style={backGroundBrown}>
-                    <div className="portfolio-sacousel-inner">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12">
-                                    <div className="section-title text-center service-style--3 mb--30">
-                                        <h2 style={{fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }} className="title">Port New</h2>
-                                        {/* <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p> */}
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row">
-                                {/* <PortfolioList styevariation="text-left mt--40" column="col-lg-4 col-md-6 col-sm-6 col-12" item="6" /> */}
-                                <PortfolioListNew styevariation="text-left mt--40" column="col-lg-4 col-md-6 col-sm-6 col-12" item="6" portfolioItems={portfolioItems} />
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-12">
-                                    <div className="view-more-btn mt--60 text-center">
-                                        {/* <a className="rn-button-style--2 btn-solid" href="/portfolio"><span>View More Project</span></a> */}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
 
 
             </main>
@@ -316,7 +305,7 @@ const Portfolio = () => {
             {/* Start Back To Top */}
             <div className="backto-top">
                 <ScrollToTop showUnder={160}>
-                <FiChevronUp style={{ color: '#EF5474'}}/>
+                <FiChevronUp style={{ color: '#EF5474'}} />
                 </ScrollToTop>
             </div>
             {/* End Back To Top */}

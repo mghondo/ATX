@@ -1,0 +1,135 @@
+/* CSS for Gallery2 component */
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .gallery-item {
+    width: calc(50% - 10px); /* Two items per row on larger screens */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.03);
+  }
+  
+  .gallery-image {
+    height: 200px; /* Adjust the height as needed */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .gallery-info {
+    padding: 10px;
+    background-color: #fff;
+  }
+  
+  /* Fullscreen Overlay Styles */
+  
+  .fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .fullscreen-image {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .fullscreen-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .fullscreen-image-inner {
+    max-width: 100%;
+    max-height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .fullscreen-info {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .fullscreen-close,
+  .fullscreen-left,
+  .fullscreen-right,
+  .fullscreen-zoom {
+    position: absolute;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    padding: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .fullscreen-close:hover,
+  .fullscreen-left:hover,
+  .fullscreen-right:hover,
+  .fullscreen-zoom:hover {
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    background-color: rgb(255, 255, 255);
+  }
+
+  /* Fullscreen Overlay Styles */
+  .fullscreen-overlay {
+    position: fixed;
+    top: 5%; /* Adjust to your desired position */
+    left: 5%; /* Adjust to your desired position */
+    right: 5%; /* Adjust to your desired position */
+    bottom: 5%; /* Adjust to your desired position */
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* z-index: 9999; */
+  }
+
+  .fullscreen-image {
+    position: relative;
+    max-width: 100%; /* Updated to 100% */
+    max-height: 100%; /* Updated to 100% */
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); */
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  

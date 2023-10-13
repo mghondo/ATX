@@ -16,8 +16,9 @@ import ScrollToTop from 'react-scroll-up';
 import { FiChevronUp } from "react-icons/fi";
 import Helmet from "../component/common/Helmet";
 
-const image1 =
-  "/assets/images/bg/paralax/bg-image-3-overlay.jpg";
+const image1 = '/assets/images/brand/AJS_4086-Edit_02.jpg'
+//   "/assets/images/bg/paralax/bg-image-3-overlay.jpg";
+
 
   const SlideList = [
     {

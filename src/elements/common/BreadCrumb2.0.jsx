@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+
+AOS.init();
 
 class Breadcrumb2_0 extends Component {
   render() {
@@ -20,7 +24,7 @@ class Breadcrumb2_0 extends Component {
             <div className="row">
               <div className="col-lg-12">
                 <div className="breadcrumb-inner pt--100">
-                  <h2 style={{ fontFamily: 'Brice-Black' }} className="title">{title}</h2>
+                  <h2 style={{ fontFamily: 'Brice-Black' }} className="title" data-aos="fade-down" data-aos-duration="750">{title}</h2>
                   <ul className="page-list">
                     <li style={{ fontFamily: 'Brice-Light' }} className="breadcrumb-item"><Link to={`${process.env.PUBLIC_URL}`}>Home</Link></li>
                     {parent ? <li style={{ fontFamily: 'Brice-Light' }} className="breadcrumb-item">{parent}</li> : ''}

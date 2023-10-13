@@ -1,0 +1,31 @@
+/* Add this CSS to style the dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff; /* Background color of the dropdown menu */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Add a shadow to the dropdown menu */
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block; /* Show the dropdown menu when hovering over the 'Catalog' link */
+}
+
+.dropdown-menu li {
+    padding: 10px; /* Adjust padding as needed */
+}
+
+.dropdown-menu a {
+    color: #333; /* Text color for dropdown options */
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f2f2f2; /* Background color on hover */
+}

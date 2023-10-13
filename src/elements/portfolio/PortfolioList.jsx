@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom";
+import { Parallax } from "react-parallax";
+
+const image1 = '/assets/images/bg/riverTube2.0.png';
 
 const PortfolioListContent = [
     {

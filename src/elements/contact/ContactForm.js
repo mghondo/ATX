@@ -1,11 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import emailjs from "emailjs-com";
+import TypingAnimation from "../common/TypingAnimation";
+// import emailjs from "@emailjs/browser";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init();
+
+const textToType = "Hello, I'm a typing animation!";
 
 const Result = () => {
   return (
-    <p className="success-message">
-      Your Message has been successfully sent. I will contact you soon.
-    </p>
+    <div>
+      <br />
+      <TypingAnimation
+        text="Your Message has been successfully sent. I will contact you soon!"
+        elementType="p"
+        typingSpeed={50}
+        style={{
+          fontFamily: "Brice-Black",
+          fontSize: "30px",
+          color: "#ef5474",
+          textAlign: "center",
+          textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)",
+        }}
+      />
+    </div>
   );
 };
 function ContactForm({ props }) {
@@ -15,14 +36,15 @@ function ContactForm({ props }) {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_p4x3hv8",
-        "template_jgfr42f",
+        "service_ux433e8",
+        "template_2nll9p6",
         e.target,
-        "user_jrfTH2e0Ely35ZCVFdT9S"
+        "AOZY_3b_X5v6kfTLO"
       )
       .then(
         (result) => {
           console.log(result.text);
+          // console.log(showresult(true));
         },
         (error) => {
           console.log(error.text);
@@ -39,26 +61,61 @@ function ContactForm({ props }) {
   return (
     <form action="" onSubmit={sendEmail}>
       <div className="rn-form-group">
-        <input type="text" name="fullname" placeholder="Your Name" required />
+        <input
+          type="text"
+          name="fullname"
+          placeholder="Your Name"
+          required
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        />
       </div>
 
       <div className="rn-form-group">
-        <input type="email" name="email" placeholder="Your Email" required />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        />
       </div>
 
       <div className="rn-form-group">
-        <input type="text" name="phone" placeholder="Phone Number" required />
+        <input
+          type="text"
+          name="phone"
+          placeholder="Phone Number"
+          required
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        />
       </div>
 
       <div className="rn-form-group">
-        <input type="text" name="subject" placeholder="Subject" required />
+        <input
+          type="text"
+          name="subject"
+          placeholder="Subject"
+          required
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        />
       </div>
 
       <div className="rn-form-group">
-        <textarea name="message" placeholder="Your Message" required></textarea>
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          required
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        ></textarea>
       </div>
 
       <div className="rn-form-group">
+        <br />
         <button
           style={{ color: "#EF5474" }}
           className="rn-button-style--2 btn-solid"

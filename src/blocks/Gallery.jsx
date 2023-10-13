@@ -190,9 +190,9 @@ class Gallery extends Component {
             {/* End Page Wrapper  */}
 
             {/* Start Back To Top */}
-            <div className="backto-top">
+            <div className="backto-top" >
                 <ScrollToTop showUnder={160}>
-                    <FiChevronUp />
+                    <FiChevronUp style={{ color: '#EF5474'}}/>
                 </ScrollToTop>
             </div>
             {/* End Back To Top */}

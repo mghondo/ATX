@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Parallax } from "react-parallax";
 
 const image1 =
-  "/assets/images/bg/bg-image-11.jpg";
+  "/assets/images/bg/AJS_4086-Edit_02.jpg";
 
 
 
@@ -10,7 +10,7 @@ const SlideList = [
     {
         textPosition: 'text-center',
         category: '',
-        title: 'Marketing',
+        title: 'Marketing!',
         description: 'There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration.',
         buttonText: 'Contact Us',
         buttonLink: '/contact-us'

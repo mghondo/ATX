@@ -12,10 +12,44 @@ import { slickDot , portfolioSlick2 } from "../page-demo/script";
 import ContactTwo from "../elements/contact/ContactTwo";
 import { FiHeadphones , FiMail , FiMapPin } from "react-icons/fi";
 import ServiceList from '../elements/service/ServiceList'
+import TypingAnimation from "../elements/common/TypingAnimation";
+import { Parallax } from "react-parallax";
+
+import './interiorStyles.css';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+
+
+AOS.init();
+
+// const image1 = '/assets/images/bg/ATXBanner.jpg';
+// const image1 = '/assets/images/bg/AmandaTube2.png';
+const image1 = '/assets/images/bg/riverTube2.0.png';
+
+
+const getAnimationClass = (index) => {
+    if (index === 0) {
+      return "fade-left"; // First item
+    } else if (index === 1) {
+      return "fade-up"; // Second item
+    } else if (index === 2) {
+      return "fade-right"; // Third item
+    } else {
+      return "fade-up"; // Rest of the items
+    }
+  };
 
 // /elements/service/ServiceList.jsx
 
+const textToType = "Hello, I'm a typing animation!";
 
+const customStyle = {
+    fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'
+    // Add any other CSS properties as needed
+  };
+
+  
 
 const SlideList = [
     {
@@ -134,17 +168,20 @@ const list = [
     {
         image: 'image-1',
         category: 'River Tubes',
-        title: 'Get your custom made river tubes here!!'
+        title: 'Get your custom made river tubes here!!',
+        url: '/portfolio#riverTubes'
     },
     {
         image: 'image-2',
         category: 'Park Tubes',
-        title: 'Get tubes for your water park here!'
+        title: 'Get tubes for your water park here!',
+        url: '/portfolio#parkTubes'
     },
     {
         image: 'image-3',
         category: 'Awesome Gear',
-        title: 'Every adventure needs extra gear. Click here'
+        title: 'Every adventure needs extra gear. Click here',
+        url: '/portfolio#awesomeGear'
     },
 
 ]
@@ -183,6 +220,7 @@ class InteriorLanding extends Component{
     }
     stickyHeader () {}
     render(){
+        
         window.addEventListener('scroll', function() {
             var value = window.scrollY;
             if (value > 50) {
@@ -201,7 +239,9 @@ class InteriorLanding extends Component{
                 }
             }
         }
+
         return(
+            
             <Fragment>
                 <Helmet pageTitle="Interior Design" />
 
@@ -239,13 +279,27 @@ class InteriorLanding extends Component{
                                     {/* <li><a href="#testimonial">Testimonial</a></li> */}
                                     {/* <li><a href="#team">Team</a></li> */}
                                     <li><a href="/contact">Contact</a></li>
-                                    <li><a href="/portfolio" style={{ fontFamily: 'Brice-Black'}}>Catalog</a></li> 
+                                    {/* <li><a href="/portfolio" style={{ fontFamily: 'Brice-Black'}}>Catalog</a></li> 
+
                                     
+                                    <ul className="dropdown-menu">
+                                        <li><a href="/portfolio#riverTubes">River Tubes</a></li>
+                                        <li><a href="/portfolio#parkTubes">Park Tubes</a></li>
+                                        <li><a href="/portfolio#awesomeGear">Awesome Gear</a></li>
+                                    </ul> */}
+                                        <li className="dropdown">
+        <a href="#catalog">Catalog</a>
+        <ul className="dropdown-menu">
+            <li><a href="/portfolio#riverTubes">River Tubes</a></li>
+            <li><a href="/portfolio#parkTubes">Park Tubes</a></li>
+            <li><a href="/portfolio#awesomeGear">Awesome Gear</a></li>
+        </ul>
+    </li>
                                 </Scrollspy>
                             </nav>
                             <div className="header-btn">
                                 <a className="rn-btn" href="/portfolio">
-                                    <span style={{ fontFamily: 'Brice-Black'}}>Shop Now</span>
+                                    <span style={{ fontFamily: 'Brice-Black'}} data-aos="fade-down" data-aos-duration="750">Shop Now</span>
                                 </a>
                             </div>
                             {/* Start Humberger Menu  */}
@@ -273,9 +327,9 @@ class InteriorLanding extends Component{
                                 
                                             <div className={`inner ${value.textPosition}`}>
                                                 {value.category ? <span>{value.category}</span> : ''}
-                                                {value.title ? <h1 className="title" style={{fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}}>{value.title}</h1> : ''}
-                                                {value.description ? <p style={{ fontFamily: 'Brice-Light', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }} className="description">{value.description}</p> : ''}
-                                                {value.buttonText ? <div className="slide-btn"><a style={{fontFamily: 'Brice-Black', fontSize:'30px', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}}  className="rn-button-style--2 btn-primary-color" href={`${value.buttonLink}`} >{value.buttonText}</a></div> : ''}
+                                                {value.title ? <h1 data-aos="fade-down" data-aos-duration="750" className="title" style={{fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}}>{value.title}</h1> : ''}
+                                                {value.description ? <p data-aos="fade-up" data-aos-duration="750" style={{ fontFamily: 'Brice-Light', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }} className="description">{value.description}</p> : ''}
+                                                {value.buttonText ? <div data-aos="fade-up" data-aos-duration="750"className="slide-btn"><a style={{fontFamily: 'Brice-Black', fontSize:'30px', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}}  className="rn-button-style--2 btn-primary-color" href={`${value.buttonLink}`} >{value.buttonText}</a></div> : ''}
                                                 {/* href={`${value.buttonLink}`} */}
                                             </div>
                                         </div>
@@ -287,47 +341,49 @@ class InteriorLanding extends Component{
                 </div>
                 {/* End Slider Area   */}
 
-                
                                 {/* Start Portfolio Area */}
-                <div className="portfolio-area ptb--120 bg_color--1" id="catalog" style={ backGroundBrown }>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <div className="section-title text-left service-style--3 mb--30">
-                                    <h2 style={{ fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}} className="title text-center">Park Tubes, River Tubes and More</h2>
-                                    <p style={{ fontFamily: 'Brice-Light' }} className="text-center">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
-                                </div>
-                            </div>
+    <div className="portfolio-area pt--90 pb--140 bg_color--1" style={{ backgroundColor: '#f3edd1', paddingBottom: '40px' }}>
+      <div className="rn-slick-dot">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12" data-aos='fade-up' data-aos-duration="750">
+              <div className={`section-title text-center service-style--3 mb--30`}>
+                <h2 style={{ fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }} className="title">Park Tubes, River Tubes and More!!!</h2>
+              </div>
+              <div className="slick-space-gutter--15 slickdot--20">
+                <Slider {...slickDot}>
+                  {list.map((value, index) => (
+                    <div className={`portfolio`} key={index} data-aos='fade-down'  data-aos-duration="750">
+                      <div className="thumbnail-inner">
+                        <div className={`thumbnail ${value.image}`}></div>
+                        <div className={`bg-blr-image ${value.image}`}></div>
+                      </div>
+                      <div className="content">
+                        <div className="inner">
+                          <p style={{ fontFamily: 'Brice-Black', fontSize: '40px', color: '#ef5474' }}>{value.category}</p>
+                          <h4 style={{ fontFamily: 'Brice-Light' }}>
+                            <a href="/portfolio-details">{value.title}</a>
+                          </h4>
+                          <div className="portfolio-button">
+                            <a style={{ fontFamily: 'Brice-Black' }} className="rn-btn" href={value.url}>
+                              See More!
+                            </a>
+                          </div>
                         </div>
+                      </div>
                     </div>
-                    <div className="wrapper portfolio-sacousel-inner mb--55" style={{marginBottom: '15px'}}>
-                        <div className="portfolio-slick-activation mt--30 mt_sm--30">
-                            <Slider {...portfolioSlick2}>
-                            {/* <Slider {...list}> */}
-                            {/* list */}
-                                {PortfolioList2.map((value , index) => (
-                                    <div className="portfolio portfolio-interior-design" key={index} href="/portfolio">
-                                        <div className="thumbnail-inner">
-                                            <div className={`thumbnail ${value.image}`}></div>
-                                            <div className={`bg-blr-image ${value.image}`}></div>
-                                        </div>
-                                        <div className="content">
-                                            <div className="inner">
-                                                <p style={{fontFamily: 'Brice-Black'}} href="/portfolio">{value.category}</p>
-                                                <h4 style={{fontFamily: 'Brice-Black'}}><a href="/portfolio">{value.title}</a></h4>
-                                                <div className="portfolio-button">
-                                                    <a className="rn-btn" href="/portfolio">Case Study</a>
-                                                    {/* href="/portfolio-details" */}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </Slider>
-                        </div>
-                    </div>
-                </div>
+                  ))}
+                </Slider>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
                 {/* End Portfolio Area */}
+
+                
+
 
                 {/* Start Service Area  */}
 
@@ -362,7 +418,7 @@ class InteriorLanding extends Component{
                 {/* End CounterUp Area */}
 
                 <div id="service" className="fix">
-                <div className="service-area creative-service-wrapper ptb--120 bg_color--5" style={{backgroundColor: '#f3edd1',}} >
+                <div className="service-area creative-service-wrapper ptb--120 bg_color--5" style={{ paddingTop: '10px', backgroundColor: '#f3edd1',}} >
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
@@ -371,7 +427,7 @@ class InteriorLanding extends Component{
                                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
                                 </div> */}
                                 <div className="feature-area" style={{textAlign: 'center'}}>
-                                    <span style={{ color: '#ef5474', fontFamily: 'Brice-Black', fontSize: '45px', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}}>Wholesale Custom Gear</span>
+                                    <span style={{ color: '#ef5474', fontFamily: 'Brice-Black', fontSize: '45px', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}} data-aos="fade-up" data-aos-duration="750">Wholesale Custom Gear</span>
                                     <h3 className="title mt--20 fontWeight500 lineheight--1-8" style={{color: 'black', fontFamily: 'Brice-Light'}}>ATX Float is a team of product developers & designers, graphic artists, sales managers, and distribution personnel. The product design and management team office in Austin Texas, and warehousing and distribution is based in New Braunfels Texas.</h3>
                                 </div>
                             </div>
@@ -386,18 +442,39 @@ class InteriorLanding extends Component{
             </div>
 
                 {/* Start Content Box  */}
-
-                {/* End Content Box  */}
-
-                {/* Start Team Area  */}
-                <div className="rn-team-wrapper pb--120 bg_color--1" id="team" style={{backgroundColor: '#f3edd1', paddingTop: '70px'}}>
+                
+                {/* <div className="rn-team-wrapper pb--120 bg_color--1" id="team" style={{backgroundColor: '#f3edd1', paddingTop: '70px'}}>
+                <Parallax bgImage={image1} strength={1000} style={{padding: '30px'}}>
                     <div className="rn-team-area">
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="section-title text-left mb--30">
-                                        <h2 style={{ color: '#EF5474', fontFamily: 'Brice-Black', textAlign: 'center' }}>Meet Our Designers</h2>
-                                        {/* <p>There are many variations of passages of Lorem Ipsum available, <br /> but the majority have suffered alteration.</p> */}
+                                        <h2 style={{ color: '#EF5474', fontFamily: 'Brice-Black', textAlign: 'center', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }} data-aos="fade-up" data-aos-duration="750">Meet Our Designers</h2>
+     </div>
+                                    
+                                </div>
+                            </div>
+                            <TeamOne column="col-lg-3 col-md-6 col-sm-6 col-12" teamStyle="team-style--bottom" item="3" />
+                        </div>
+                    </div>
+                    </Parallax>
+                </div> */}
+
+
+                
+                {/* End Content Box  */}
+
+                {/* Start Team Area  */}
+                <div className="rn-team-wrapper pb--120 bg_color--1" id="team" style={{backgroundColor: '#f3edd1', paddingTop: '70px'}}>
+                <Parallax bgImage={image1} strength={800} style={{padding: '70px',}}>
+                    <div className="rn-team-area">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    <div className="section-title text-left mb--30">
+                                        <h2 style={{ color: '#EF5474', fontFamily: 'Brice-Black', textAlign: 'center', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }} data-aos="fade-up" data-aos-duration="750">Meet Our Staff</h2>
+                                        <p style={{color: 'white', fontFamily: 'Brice-Light'}}>ATX Float's mission to enhance the lives of individuals by providing a unique and rejuvenating escape makes it truly exceptional. With a strong commitment to customer satisfaction, it offers a serene and transformative experience to its clients. The company's dedication to promoting relaxation, well-being, and mindfulness through cutting-edge technology and luxurious facilities sets it apart in the industry.</p>
                                     </div>
                                     
                                 </div>
@@ -405,6 +482,7 @@ class InteriorLanding extends Component{
                             <TeamOne column="col-lg-3 col-md-6 col-sm-6 col-12" teamStyle="team-style--bottom" item="3" />
                         </div>
                     </div>
+                    </Parallax>
                 </div>
                 {/* End Team Area  */}
                 {/* <ContactTwo /> */}
@@ -427,7 +505,7 @@ class InteriorLanding extends Component{
                        
                         <div className="row">
                             {/* Start Single Address  */}
-                            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div className="col-lg-4 col-md-6 col-sm-6 col-12" data-aos="fade-left" data-aos-duration="750">
                                 <div className="rn-address" style={{ backgroundColor: '#f3edd1'}}>
                                     <div className="icon" style={{ color: '#EF5474'}}>
                                         <FiHeadphones />
@@ -442,7 +520,7 @@ class InteriorLanding extends Component{
                             {/* End Single Address  */}
 
                             {/* Start Single Address  */}
-                            <div className="col-lg-4 col-md-6 col-sm-6 col-12 mt_mobile--50">
+                            <div className="col-lg-4 col-md-6 col-sm-6 col-12 mt_mobile--50" data-aos="fade-up" data-aos-duration="750">
                                 <div className="rn-address" style={{ backgroundColor: '#f3edd1'}}>
                                     <div className="icon" style={{ color: '#EF5474'}}>
                                         <FiMail />
@@ -457,7 +535,7 @@ class InteriorLanding extends Component{
                             {/* End Single Address  */}
 
                             {/* Start Single Address  */}
-                            <div className="col-lg-4 col-md-6 col-sm-6 col-12 mt_md--50 mt_sm--50">
+                            <div className="col-lg-4 col-md-6 col-sm-6 col-12 mt_md--50 mt_sm--50" data-aos="fade-right" data-aos-duration="750">
                                 <div className="rn-address" style={{ backgroundColor: '#f3edd1'}}>
                                     <div className="icon" style={{ color: '#EF5474'}}>
                                         <FiMapPin />

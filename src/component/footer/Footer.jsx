@@ -3,10 +3,10 @@ import {FaTwitter ,FaInstagram ,FaFacebookF , FaLinkedinIn} from "react-icons/fa
 
 const SocialShare = [
     // {Social: <FaFacebookF /> , link: 'https://www.facebook.com/atxfloat/'},
-    {Social: <FaFacebookF /> , link: 'www.facebook.com/atxfloat/'},
+    {Social: <FaFacebookF /> , link: 'https://www.facebook.com/atxfloat/'},
     // {Social: <FaLinkedinIn /> , link: 'https://www.linkedin.com/'},
     // {Social: <FaInstagram /> , link: 'https://www.instagram.com/atx.float/'},
-    {Social: <FaInstagram /> , link: 'www.instagram.com/atx.float/'},
+    {Social: <FaInstagram /> , link: 'https://www.instagram.com/atx.float/'},
     // {Social: <FaTwitter /> , link: 'https://twitter.com/'},
 ]
 
@@ -18,7 +18,7 @@ class Footer extends Component{
     render(){
         return(
             <React.Fragment>
-                <footer className="footer-area" >
+                <footer className="footer-area" style={{ backgroundColor: '#f3edd1'}}>
                     <div className="footer-wrapper" >
                         <div className="row align-items-end row--0">
                             <div className="col-lg-6">

@@ -10,6 +10,11 @@ import Header from "../component/header/Header";
 import Footer from "../component/footer/Footer";
 import Breadcrumb2_0 from "./common/BreadCrumb2.0";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+
+AOS.init();
+
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 const footerBackground ={
     backgroundColor: '#44494e'
@@ -56,19 +61,25 @@ class Contact extends Component{
         backgroundImage="/assets/images/blog/ZachandJay.jpg"
         dataBlackOverlay={4}
       />
+
+                      {/* Start Contact Page Area  */}
+                <div className="rn-contact-page ptb--120 bg_color--1" style={{backgroundColor: '#f3edd1', paddingTop: '100px', paddingBottom:'50px'}}>
+                    <ContactTwo data-aos="fade-left" data-aos-duration="1000" />
+                </div>
+                {/* End Contact Page Area  */}
                 {/* End Breadcrump Area */}
-                <div className="rn-contact-top-area ptb--120 bg_color--5" style={{backgroundColor: '#f3edd1'}}>
+                <div className="rn-contact-top-area ptb--120 bg_color--5" style={{backgroundColor: '#f3edd1', padding: '50px'}}>
                     <div className="container">
                        
                         <div className="row">
                             {/* Start Single Address  */}
-                            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div className="col-lg-4 col-md-6 col-sm-6 col-12" data-aos="fade-left" data-aos-duration="750">
                                 <div className="rn-address">
                                     <div className="icon" style={{ color: '#EF5474'}}>
                                         <FiHeadphones />
                                     </div>
                                     <div className="inner">
-                                        <h4 style={{ fontFamily: 'Brice-Black', fontSize: '30px',  color: '#EF5474',}} className="title">Call Us!</h4>
+                                        <h4 style={{ fontFamily: 'Brice-Black', fontSize: '30px',  color: '#EF5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}} className="title">Call Us!</h4>
                                         <p><a style={{ fontFamily: 'Brice-Light'}}  href="tel:+1-512-210-5959">1-512-210-5959</a></p><br/>
                                         {/* <p><a href="tel:+856 325 652 984">+856 325 652 984</a></p> */}
                                     </div>
@@ -77,13 +88,13 @@ class Contact extends Component{
                             {/* End Single Address  */}
 
                             {/* Start Single Address  */}
-                            <div className="col-lg-4 col-md-6 col-sm-6 col-12 mt_mobile--50">
+                            <div className="col-lg-4 col-md-6 col-sm-6 col-12 mt_mobile--50" data-aos="fade-up" data-aos-duration="750">
                                 <div className="rn-address">
                                     <div className="icon" style={{ color: '#EF5474'}}>
                                         <FiMail />
                                     </div>
                                     <div className="inner">
-                                        <h4 style={{ fontFamily: 'Brice-Black', fontSize: '30px',  color: '#EF5474',}}  className="title">Email Address</h4>
+                                        <h4 style={{ fontFamily: 'Brice-Black', fontSize: '30px',  color: '#EF5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}}  className="title">Email Address</h4>
                                         <p><a style={{ fontFamily: 'Brice-Light'}} href="mailto:team@atxfloat.com" target="_blank">team@atxfloat.com</a></p><br/>
                                         {/* <p><a href="mailto:example@gmail.com">example@gmail.com</a></p> */}
                                     </div>
@@ -92,13 +103,13 @@ class Contact extends Component{
                             {/* End Single Address  */}
 
                             {/* Start Single Address  */}
-                            <div className="col-lg-4 col-md-6 col-sm-6 col-12 mt_md--50 mt_sm--50">
+                            <div className="col-lg-4 col-md-6 col-sm-6 col-12 mt_md--50 mt_sm--50" data-aos='fade-right'  data-aos-duration="750">
                                 <div className="rn-address" >
                                     <div className="icon" style={{ color: '#EF5474'}}>
                                         <FiMapPin />
                                     </div>
                                     <div className="inner">
-                                        <h4 style={{ fontFamily: 'Brice-Black', fontSize: '30px',  color: '#EF5474',}}  className="title">Location</h4>
+                                        <h4 style={{ fontFamily: 'Brice-Black', fontSize: '30px',  color: '#EF5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}}  className="title">Location</h4>
                                         
 
                                         <p style={{ fontFamily: 'Brice-Light'}}>411 W Monroe St<br /> Austin, TX 78704</p>
@@ -115,16 +126,12 @@ class Contact extends Component{
 
    
 
-                {/* Start Contact Page Area  */}
-                <div className="rn-contact-page ptb--120 bg_color--1" style={{backgroundColor: '#f3edd1', padding: '10px'}}>
-                    <ContactTwo />
-                </div>
-                {/* End Contact Page Area  */}
+
 
                 {/* Start Contact Map  */}
-                <div className="rn-contact-map-area position-relative" style={{ backgroundColor: '#f3edd1', paddingTop: '40px' }}>
+                <div className="rn-contact-map-area position-relative" style={{ backgroundColor: '#f3edd1', paddingTop: '40px', display: 'none' }}>
                     
-  <div style={{ height: '500px', width: '50%', display: 'none'}}>
+  <div style={{ height: '500px', width: '50%'}}>
     <GoogleMapReact
       defaultCenter={this.props.center}
       defaultZoom={this.props.zoom}
@@ -156,8 +163,8 @@ class Contact extends Component{
 
                 {/* Start Back To Top */}
                 <div className="backto-top">
-                    <ScrollToTop showUnder={160}>
-                         <FiChevronUp style={{ color: '#EF5474'}}/>
+                <ScrollToTop showUnder={160}>
+                        <FiChevronUp style={{ color: '#EF5474'}}/>
                     </ScrollToTop>
                 </div>
                 {/* End Back To Top */}

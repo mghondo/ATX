@@ -1,5 +1,10 @@
 import React ,{ Component }from "react";
 import { FiCast , FiLayers , FiUsers , FiMonitor, FiSearch, FiSend, FiTrendingUp, FiSliders, FiDollarSign} from "react-icons/fi";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+
+
+AOS.init();
 
 const ServiceList = [
     {
@@ -48,12 +53,12 @@ class ServiceThree extends Component{
                         <div className={`${column}`} key={i}>
                             <a href="/portfolio">
                                 <div className="service service__style--2" style={{backgroundColor: '#9fccd6'}}>
-                                    <div className="icon" style={{fontSize: '130px', display: 'flex', justifyContent: 'center' }}>
+                                    <div data-aos="fade-down" data-aos-duration="650" className="icon" style={{fontSize: '130px', display: 'flex', justifyContent: 'center' }}>
                                         {val.icon}
                                     </div>
-                                    <div className="content">
-                                        <h3 style={{ color: '#ef5474', fontFamily: 'Brice-Light', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)', fontSize: '40px', textAlign:'center'}} className="title">{val.title}</h3>
-                                        <p>{val.description}</p>
+                                    <div className="content" >
+                                        <h3 data-aos="fade-right" data-aos-duration="850"  style={{ color: '#ef5474', fontFamily: 'Brice-Light', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)', fontSize: '40px', textAlign:'center'}} className="title">{val.title}</h3>
+                                        <p data-aos="fade-left" data-aos-duration="950" >{val.description}</p>
                                     </div>
                                 </div>
                             </a>
