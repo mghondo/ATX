@@ -1,4 +1,4 @@
-import React, { Component , Fragment, useState } from "react";
+import React, { Component , Fragment, useState, useEffect } from "react";
 import Scrollspy from 'react-scrollspy';
 import ScrollToTop from 'react-scroll-up';
 import { FiChevronUp , FiX , FiMenu } from "react-icons/fi";
@@ -10,15 +10,20 @@ import TeamOne from "../blocks/team/TeamOne";
 import Slider from "react-slick";
 import { slickDot , portfolioSlick2 } from "../page-demo/script";
 import ContactTwo from "../elements/contact/ContactTwo";
-import { FiHeadphones , FiMail , FiMapPin } from "react-icons/fi";
+import { FiHeadphones , FiMail , FiMapPin, FaInstagram } from "react-icons/fi";
 import ServiceList from '../elements/service/ServiceList'
 import TypingAnimation from "../elements/common/TypingAnimation";
 import { Parallax } from "react-parallax";
+import PageHelmet from "../component/common/Helmet";
+import Breadcrumb from "../elements/common/Breadcrumb";
+import Header from "../component/header/Header";
+
 
 import './interiorStyles.css';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import NewStaffComp from "./NewStaffComp";
 
 
 AOS.init();
@@ -67,8 +72,11 @@ const backgroundStyle = {
 
     // backgroundImage: `url('IMG_6288.png')`,
     backgroundImage: `url('/assets/images/bg/ATXBanner.jpg')`,
-      backgroundPosition: 'center 70%',
-      backgroundSize: 'cover', // Choose the desired option
+    //   backgroundPosition: 'center 70%',
+    //   backgroundSize: 'cover', // Choose the desired option
+    backgroundPosition: 'right',
+    backgroundSize: 'cover',
+    // height: '600px',
     
     
     // trydo/build/assets/images/bg/ATXBanner.jpg
@@ -189,6 +197,7 @@ const list = [
 
 
 class InteriorLanding extends Component{
+    
     constructor(props) {
         super(props);
         this.menuTrigger = this.menuTrigger.bind(this);
@@ -196,6 +205,7 @@ class InteriorLanding extends Component{
         this.stickyHeader = this.stickyHeader.bind(this);
         this.state = {
             scrolled: false, // Initialize the scroll state
+            selectedSummary: null,
           };
 
        //  this.subMetuTrigger = this.subMetuTrigger.bind(this);
@@ -204,6 +214,10 @@ class InteriorLanding extends Component{
         });
         window.addEventListener('scroll', this.handleScroll);
     }
+    handleSummaryClick = (summary) => {
+        this.setState({ selectedSummary: summary });
+      };
+      
     handleScroll = () => {
         if (window.scrollY > 0) {
           this.setState({ scrolled: true });
@@ -243,103 +257,17 @@ class InteriorLanding extends Component{
         return(
             
             <Fragment>
+
+<PageHelmet pageTitle='ATX Float' />
+
+<Header headertransparent="header--transparent" colorblack="color--black" logoname="logo.png" />
+{/* Start Breadcrump Area */}
+<Breadcrumb title={'ATX Float'}   />
                 <Helmet pageTitle="Interior Design" />
 
                 {/* Start Header Area  */}
                 {/* <header className="header-area formobile-menu header--fixed default-color"> */}
-                <header
-          className={`header-area formobile-menu header--fixed default-color ${
-            this.state.scrolled ? 'header-right-visible' : ''
-          }`}
-        >
-                    <div className="header-wrapper" id="header-wrapper">
-                    {this.state.scrolled && (
-                        <>
-                        <div className="header-left">
-                            <div className="logo">
-                                <a href="/">
-                                
-                                    <img style={{ maxWidth: '200px', maxHeight: '30px' }}  className="logo-1" src="/assets/images/logo/ATX_Logo_6dcef0.png" alt="Logo Images"/>
-                                    <img style={{ maxWidth: '200px', maxHeight: '20px' }}  className="logo-2" src="/assets/images/logo/ATX_Logo_6dcef0.png" alt="Logo Images"/>
-                                    {/* <img className="logo-1" src="/assets/images/logo/logo-light.png" alt="Logo Images"/>
-                                    <img className="logo-2" src="/assets/images/logo/logo-all-dark.png" alt="Logo Images"/> */}
-                                </a>
-                            </div>
-                        </div>
-                       
-                        <div className="header-right">
-                            <nav className="mainmenunav d-lg-block">
-                                <Scrollspy className="mainmenu" style={{ fontFamily: 'Brice-Light' }} items={['home','service','getstart','about','team','testimonial','portfolio']} currentClassName="is-current" offset={-200}>
-                                    <li><a href="#home">Home</a></li>
-                                    {/* <li><a href="#catalog">Catalog</a></li> */}
-                                    {/* <li><a href="#service">Service</a></li>
-                                    <li><a href="#getstart">Get Start</a></li>
-                                    <li><a href="#about">About</a></li> */}
-                                    <li><a href="/about">About</a></li> 
-                                    {/* <li><a href="#testimonial">Testimonial</a></li> */}
-                                    {/* <li><a href="#team">Team</a></li> */}
-                                    <li><a href="/contact">Contact</a></li>
-                                    {/* <li><a href="/portfolio" style={{ fontFamily: 'Brice-Black'}}>Catalog</a></li> 
 
-                                    
-                                    <ul className="dropdown-menu">
-                                        <li><a href="/portfolio#riverTubes">River Tubes</a></li>
-                                        <li><a href="/portfolio#parkTubes">Park Tubes</a></li>
-                                        <li><a href="/portfolio#awesomeGear">Awesome Gear</a></li>
-                                    </ul> */}
-                                        <li className="dropdown">
-        <a href="#catalog">Catalog</a>
-        <ul className="dropdown-menu">
-            <li><a href="/portfolio#riverTubes">River Tubes</a></li>
-            <li><a href="/portfolio#parkTubes">Park Tubes</a></li>
-            <li><a href="/portfolio#awesomeGear">Awesome Gear</a></li>
-        </ul>
-    </li>
-                                </Scrollspy>
-                            </nav>
-                            <div className="header-btn">
-                                <a className="rn-btn" href="/portfolio">
-                                    <span style={{ fontFamily: 'Brice-Black'}} data-aos="fade-down" data-aos-duration="750">Shop Now</span>
-                                </a>
-                            </div>
-                            {/* Start Humberger Menu  */}
-                            <div className="humberger-menu d-block d-lg-none pl--20">
-                                <span onClick={this.menuTrigger} className="menutrigger text-white"><FiMenu /></span>
-                            </div>
-                            {/* End Humberger Menu  */}
-                            <div className="close-menu d-block d-lg-none">
-                                <span onClick={this.CLoseMenuTrigger} className="closeTrigger"><FiX /></span>
-                            </div>
-                        </div>
-                        </>)}
-                    </div>
-                </header>
-                {/* End Header Area  */}
-
-                {/* Start Slider Area   */}
-                <div className="slider-activation slider-creative-agency" id="home">
-                    <div className="bg_image bg_image--100" style={backgroundStyle} data-black-overlay="1">
-                        {SlideList.map((value , index) => (
-                            <div className="slide slide-style-2 slider-paralax d-flex align-items-center justify-content-center" key={index} href="portfolio">
-                                <div className="container">
-                                    <div className="row">
-                                        <div className="col-lg-12">
-                                
-                                            <div className={`inner ${value.textPosition}`}>
-                                                {value.category ? <span>{value.category}</span> : ''}
-                                                {value.title ? <h1 data-aos="fade-down" data-aos-duration="750" className="title" style={{fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}}>{value.title}</h1> : ''}
-                                                {value.description ? <p data-aos="fade-up" data-aos-duration="750" style={{ fontFamily: 'Brice-Light', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }} className="description">{value.description}</p> : ''}
-                                                {value.buttonText ? <div data-aos="fade-up" data-aos-duration="750"className="slide-btn"><a style={{fontFamily: 'Brice-Black', fontSize:'30px', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}}  className="rn-button-style--2 btn-primary-color" href={`${value.buttonLink}`} >{value.buttonText}</a></div> : ''}
-                                                {/* href={`${value.buttonLink}`} */}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-                {/* End Slider Area   */}
 
                                 {/* Start Portfolio Area */}
     <div className="portfolio-area pt--90 pb--140 bg_color--1" style={{ backgroundColor: '#f3edd1', paddingBottom: '40px' }}>
@@ -464,9 +392,33 @@ class InteriorLanding extends Component{
 
                 
                 {/* End Content Box  */}
+                {/* Start Finding Us Area  */}
+                <div className="rn-finding-us-area rn-finding-us bg_color--1" style={{backgroundColor: '#f3edd1'}}>
+                    <div className="inner">
+                        <div className="content-wrapper" >
+                            <div className="content" data-aos="fade-left" data-aos-duration="1000">
+                                <TypingAnimation elementType="h4"
+        typingSpeed={50} style={{fontFamily: 'Brice-Black', color: '#54eeef'}} className="theme-gradient" text="Find what you need to take your venue to the next level!!!" />
+                                <p>Go one step ahead with Every Order! ATX Float is your gateway to a world of water fun, delivering quality products to venues and providers nationwide. Dive into Success with Us!"</p>
+                                <a style={{fontFamily: 'Brice-Black', color: '#ef5474'}} className="rn-btn btn-white" href="/portfolio">Catalog</a>
+                            </div>
+                        </div>
+                        <div className="thumbnail">
+                            <div className="image">
+                                <img src="/assets/images/IMG_6288.png"       style={{
+        // width: '80%', // Set the image width to 80%
+        // maxWidth: '1300px', // Ensure the image doesn't exceed its original size
+        float: 'right', // Align the image to the right side
+      }}  alt="Finding Images"/>
 
+                                {/* trydo/public/assets/images/IMG_6288.png */}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* End Finding Us Area  */}
                 {/* Start Team Area  */}
-                <div className="rn-team-wrapper pb--120 bg_color--1" id="team" style={{backgroundColor: '#f3edd1', paddingTop: '70px'}}>
+                {/* <div className="rn-team-wrapper pb--120 bg_color--1" id="team" style={{backgroundColor: '#f3edd1', paddingTop: '70px'}}>
                 <Parallax bgImage={image1} strength={800} style={{padding: '70px',}}>
                     <div className="rn-team-area">
                         <div className="container">
@@ -483,7 +435,10 @@ class InteriorLanding extends Component{
                         </div>
                     </div>
                     </Parallax>
-                </div>
+                </div> */}
+
+                
+
                 {/* End Team Area  */}
                 {/* <ContactTwo /> */}
 

@@ -5,8 +5,8 @@ import { FiX , FiMenu } from "react-icons/fi";
 
 
 const headerStyle = {
-    // backgroundImage: `url('/assets/images/IMG_6288.png')`,
-    backgroundImage: `url('/assets/images/blog/ZachandJay.jpg')`,
+    backgroundImage: `url('/assets/images/IMG_6288.png')`,
+    // backgroundImage: `url('/assets/images/bg/ATXBanner.jpg')`,
   };
 class Header extends Component{
     constructor(props) {
@@ -59,7 +59,9 @@ class Header extends Component{
 
         
         return(
-            <header className={`header-area formobile-menu header--transparent ${color}`}  >
+            <header className={`header-area formobile-menu header--transparent ${color}`} style={{ backgroundImage: `url(${this.props.backgroundImage})`, backgroundSize: 'cover', }}>
+                
+            {/* <header className={`header-area formobile-menu header--transparent ${color}`}> */}
                 <div className="header-wrapper" id="header-wrapper">
                     <div className="header-left">
                         <div className="logo">
@@ -73,7 +75,14 @@ class Header extends Component{
                     <div className="header-right">
                         <nav className="mainmenunav d-lg-block" style={{fontFamily: 'Brice-Light'}} >
                             <ul className="mainmenu">
-                                <li className="has-droupdown"><Link to="/">Home</Link>
+                            <li><Link to="/portfolio" style={{fontFamily:'Brice-Black'}}>Catalog</Link>
+                                <ul className="submenu">
+                                    <li><a href="/portfolio#riverTubes">River Tubes</a></li>
+                                    <li><a href="/portfolio#parkTubes">Park Tubes</a></li>
+                                    <li><a href="/portfolio#awesomeGear">Awesome Gear</a></li>
+                                </ul>
+                                </li>
+                                {/* <li className="has-droupdown"><Link to="/">Home</Link></li> */}
                                     {/* <ul className="submenu">
                                         <li><Link to="/main-demo">Main Demo</Link></li>
                                         <li><Link to="/dark-main-demo">Main Demo Dark</Link></li>
@@ -93,7 +102,7 @@ class Header extends Component{
                                         <li><Link to="/designer-portfolio">Designer Portfolio</Link></li>
                                         <li><Link to="/interactive-agency">Interactive Agency</Link></li>
                                     </ul> */}
-                                </li>
+                                
                                 {/* <li className="has-droupdown"><Link to="/service" >Service</Link>
                                     <ul className="submenu">
                                         <li><Link to="/service">Service</Link></li>
@@ -131,13 +140,7 @@ class Header extends Component{
                                     </ul>
                                 </li> */}
                                 <li><Link to="/contact" >Contact</Link></li>
-                                <li><Link to="/portfolio">Catalog</Link>
-                                <ul className="submenu">
-                                    <li><a href="/portfolio#riverTubes">River Tubes</a></li>
-                                    <li><a href="/portfolio#parkTubes">Park Tubes</a></li>
-                                    <li><a href="/portfolio#awesomeGear">Awesome Gear</a></li>
-                                </ul>
-                                </li>
+
                             </ul>
                         </nav>
                         <div className="header-btn">

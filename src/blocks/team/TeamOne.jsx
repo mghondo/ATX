@@ -20,6 +20,8 @@ const getAnimation = (index) => {
 const TeamOne = (props) => {
     const itemSlice = data.slice(0 , props.item)
     return (
+
+
         <div className="row" style={{ display: 'flex', justifyContent: 'center' }}>
             {itemSlice.map((value , i ) => (
                 <div className={`${props.column}`} key={i} data-aos={getAnimation(i)} data-aos-duration="750">
@@ -43,3 +45,4 @@ const TeamOne = (props) => {
     )
 }
 export default TeamOne
+

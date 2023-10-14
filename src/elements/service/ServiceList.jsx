@@ -51,7 +51,7 @@ class ServiceThree extends Component{
                 <div className="row">
                     {ServiceContent.map( (val , i) => (
                         <div className={`${column}`} key={i}>
-                            <a href="/portfolio">
+                            <a>
                                 <div className="service service__style--2" style={{backgroundColor: '#9fccd6'}}>
                                     <div data-aos="fade-down" data-aos-duration="650" className="icon" style={{fontSize: '130px', display: 'flex', justifyContent: 'center' }}>
                                         {val.icon}

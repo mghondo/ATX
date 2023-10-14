@@ -10,6 +10,7 @@ import { FiChevronUp } from "react-icons/fi";
 import Header from "../component/header/Header";
 import Footer from "../component/footer/Footer";
 import TypingAnimation from "./common/TypingAnimation";
+import NewStaffComp from "../home/NewStaffComp";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
@@ -96,41 +97,18 @@ class About extends Component{
                     </div>
                 </div> */}
                 {/* End CounterUp Area */}
+                <NewStaffComp />
 
-                {/* Start Finding Us Area  */}
-                <div className="rn-finding-us-area rn-finding-us bg_color--1" style={{backgroundColor: '#f3edd1'}}>
-                    <div className="inner">
-                        <div className="content-wrapper" >
-                            <div className="content" data-aos="fade-left" data-aos-duration="1000">
-                                <TypingAnimation elementType="h4"
-        typingSpeed={50} style={{fontFamily: 'Brice-Black', color: '#54eeef'}} className="theme-gradient" text="Find what you need to take your venue to the next level!!!" />
-                                <p>Go one step ahead with Every Order! ATX Float is your gateway to a world of water fun, delivering quality products to venues and providers nationwide. Dive into Success with Us!"</p>
-                                <a style={{fontFamily: 'Brice-Black', color: '#ef5474'}} className="rn-btn btn-white" href="/portfolio">Catalog</a>
-                            </div>
-                        </div>
-                        <div className="thumbnail">
-                            <div className="image">
-                                <img src="/assets/images/IMG_6288.png"       style={{
-        // width: '80%', // Set the image width to 80%
-        // maxWidth: '1300px', // Ensure the image doesn't exceed its original size
-        float: 'right', // Align the image to the right side
-      }}  alt="Finding Images"/>
-
-                                {/* trydo/public/assets/images/IMG_6288.png */}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* End Finding Us Area  */}
 
                 {/* Start Team Area  */}
-                <div className="rn-team-area bg_color--1 ptb--120" style={{backgroundColor: '#f3edd1'}}>
+                {/* <div className="rn-team-area bg_color--1 ptb--120" style={{backgroundColor: '#f3edd1'}}>
                     <div className="container">
 
-                        <div className="row">
+                        <div className="row"> */}
+                       
                             
                             {/* Start Single Team  */}
-                            <div className="col-lg-4 col-md-6 col-sm-6 col-12" data-aos="fade-left" data-aos-duration="1000">
+                            {/* <div className="col-lg-4 col-md-6 col-sm-6 col-12" data-aos="fade-left" data-aos-duration="1000">
                                 <div className="team">
                                     <div className="thumbnail">
                                         <img className="w-100" src="/assets/images/team/team-01.jpg" alt="Blog Images"/>
@@ -145,11 +123,11 @@ class About extends Component{
                                         <li><a href="https://twitter.com/"><FaTwitter /></a></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> */}
                             {/* End Single Team  */}
 
                             {/* Start Single Team  */}
-                            <div className="col-lg-4 col-md-6 col-sm-6 col-12" data-aos="fade-down" data-aos-duration="1000">
+                            {/* <div className="col-lg-4 col-md-6 col-sm-6 col-12" data-aos="fade-down" data-aos-duration="1000">
                                 <div className="team">
                                     <div className="thumbnail">
                                         <img className="w-100" src="/assets/images/team/team-02.jpg" alt="Blog Images"/>
@@ -164,11 +142,11 @@ class About extends Component{
                                         <li><a href="https://twitter.com/"><FaTwitter /></a></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> */}
                             {/* End Single Team  */}
 
                             {/* Start Single Team  */}
-                            <div className="col-lg-4 col-md-6 col-sm-6 col-12" data-aos="fade-right" data-aos-duration="1000">
+                            {/* <div className="col-lg-4 col-md-6 col-sm-6 col-12" data-aos="fade-right" data-aos-duration="1000">
                                 <div className="team">
                                     <div className="thumbnail">
                                         <img className="w-100" src="/assets/images/team/team-03.jpg" alt="Blog Images"/>
@@ -183,20 +161,13 @@ class About extends Component{
                                         <li><a href="https://twitter.com/"><FaTwitter /></a></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> */}
                             {/* End Single Team  */}
 
-                        </div>
-                        <div className="row" style={{marginTop: '60px'}}>
-                            <div className="col-lg-12">
-                                <div className="section-title service-style--3 text-center mb--25">
-                                    <h2 className="title" style={{fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}}>Skilled Team</h2>
-                                    <p>Your success is our success, and we're committed to going the extra mile to ensure that your experience with us is nothing short of exceptional. Our doors are always open, and we welcome the opportunity to discuss how our products and services can benefit your business. </p>
-                                </div>
-                            </div>
-                        </div>
+                        {/* </div>
+
                     </div>
-                </div>
+                </div> */}
                 {/* End Team Area  */}
 
                 {/* Start Testimonial Area */}
