@@ -19,12 +19,13 @@ const ContactForm = () => {
             
             {/* Start Breadcrump Area */}
             {/* <Breadcrumb title={'Contact Form'}   /> */}
-            <Breadcrumb2_0
-        title="Page Title"
+            {/* <Breadcrumb2_0
+        title="Contact"
         parent="Parent Page"
         backgroundImage="/assets/images/blog/ZachandJay.jpg"
         dataBlackOverlay={8}
-      />
+      /> */}
+      <Breadcrumb title={'Contact'}   />
             {/* End Breadcrump Area */}
 
             {/* Start Page Wrapper  */}

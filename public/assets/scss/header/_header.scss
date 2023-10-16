@@ -202,7 +202,7 @@
                             }
                             &.is-current {
                                 > a {
-                                    color: $theme-color;
+                                    // color: $theme-color;
                                     &::after {
                                         width: 100%;
                                     }
@@ -225,7 +225,7 @@
                                 }
                                 &.is-current {
                                     a{
-                                        color: $theme-color;
+                                        // color: $theme-color;
                                         &::after {
                                             width: 100%;
                                         }

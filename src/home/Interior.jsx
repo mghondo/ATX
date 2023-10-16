@@ -74,7 +74,7 @@ const backgroundStyle = {
     backgroundImage: `url('/assets/images/bg/ATXBanner.jpg')`,
     //   backgroundPosition: 'center 70%',
     //   backgroundSize: 'cover', // Choose the desired option
-    backgroundPosition: 'right',
+    backgroundPosition: 'right top',
     backgroundSize: 'cover',
     // height: '600px',
     
@@ -260,14 +260,83 @@ class InteriorLanding extends Component{
 
 <PageHelmet pageTitle='ATX Float' />
 
-<Header headertransparent="header--transparent" colorblack="color--black" logoname="logo.png" />
+{/* <Header headertransparent="header--transparent" colorblack="color--black" logoname="logo.png" /> */}
 {/* Start Breadcrump Area */}
 <Breadcrumb title={'ATX Float'}   />
                 <Helmet pageTitle="Interior Design" />
 
                 {/* Start Header Area  */}
                 {/* <header className="header-area formobile-menu header--fixed default-color"> */}
+                {/* Start Header Area  */}
+                {/* <header className="header-area formobile-menu header--fixed default-color"> */}
+                <header
+          className={`header-area formobile-menu header--fixed default-color ${
+            this.state.scrolled ? 'header-right-visible' : ''
+          }`}
+        >
+                    <div className="header-wrapper" id="header-wrapper">
+                    {this.state.scrolled && (
+                        <>
+                        <div className="header-left" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}}>
+                            <div className="logo" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}}>
+                                <a href="/" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}}>
+                                
+                                    <img style={{ maxWidth: '200px', maxHeight: '30px' }}  className="logo-1" src="/assets/images/logo/ATX_Logo_6dcef0.png" alt="Logo Images"/>
+                                    <img style={{ maxWidth: '200px', maxHeight: '20px' }}  className="logo-2" src="/assets/images/logo/ATX_Logo_6dcef0.png" alt="Logo Images"/>
+                                    {/* <img className="logo-1" src="/assets/images/logo/logo-light.png" alt="Logo Images"/>
+                                    <img className="logo-2" src="/assets/images/logo/logo-all-dark.png" alt="Logo Images"/> */}
+                                </a>
+                            </div>
+                        </div>
+                       
+                        <div className="header-right">
+                            <nav className="mainmenunav d-lg-block">
+                                <Scrollspy className="mainmenu" style={{ fontFamily: 'Brice-Light' }} items={['home','service','getstart','about','team','testimonial','portfolio']} currentClassName="is-current" offset={-200}>
+<li className="dropdown">
+<a href="#catalog" style={{fontFamily: 'Brice-Black'}}>Catalog</a>
+<ul className="dropdown-menu">
+<li><a href="/portfolio#riverTubes">River Tubes</a></li>
+<li><a href="/portfolio#parkTubes">Park Tubes</a></li>
+<li><a href="/portfolio#awesomeGear">Awesome Gear</a></li>
+</ul>
+</li>
+                                    {/* <li><a href="#catalog">Catalog</a></li> */}
+                                    {/* <li><a href="#service">Service</a></li>
+                                    <li><a href="#getstart">Get Start</a></li>
+                                    <li><a href="#about">About</a></li> */}
+                                    <li><a href="/about">About</a></li> 
+                                    {/* <li><a href="#testimonial">Testimonial</a></li> */}
+                                    {/* <li><a href="#team">Team</a></li> */}
+                                    <li><a href="/contact">Contact</a></li>
+                                    {/* <li><a href="/portfolio" style={{ fontFamily: 'Brice-Black'}}>Catalog</a></li> 
 
+                                    
+                                    <ul className="dropdown-menu">
+                                        <li><a href="/portfolio#riverTubes">River Tubes</a></li>
+                                        <li><a href="/portfolio#parkTubes">Park Tubes</a></li>
+                                        <li><a href="/portfolio#awesomeGear">Awesome Gear</a></li>
+                                    </ul> */}
+
+                                </Scrollspy>
+                            </nav>
+                            <div className="header-btn">
+                                <a className="rn-btn" href="/portfolio">
+                                    <span style={{ fontFamily: 'Brice-Black'}} data-aos="fade-down" data-aos-duration="750">Shop Now</span>
+                                </a>
+                            </div>
+                            {/* Start Humberger Menu  */}
+                            <div className="humberger-menu d-block d-lg-none pl--20">
+                                <span onClick={this.menuTrigger} className="menutrigger text-white"><FiMenu /></span>
+                            </div>
+                            {/* End Humberger Menu  */}
+                            <div className="close-menu d-block d-lg-none">
+                                <span onClick={this.CLoseMenuTrigger} className="closeTrigger"><FiX /></span>
+                            </div>
+                        </div>
+                        </>)}
+                    </div>
+                </header>
+                {/* End Header Area  */}
 
                                 {/* Start Portfolio Area */}
     <div className="portfolio-area pt--90 pb--140 bg_color--1" style={{ backgroundColor: '#f3edd1', paddingBottom: '40px' }}>
@@ -344,8 +413,8 @@ class InteriorLanding extends Component{
                     </div>
                 </div> */}
                 {/* End CounterUp Area */}
-
-                <div id="service" className="fix">
+                {/* id="service" */}
+                <div  className="fix">
                 <div className="service-area creative-service-wrapper ptb--120 bg_color--5" style={{ paddingTop: '10px', backgroundColor: '#f3edd1',}} >
                     <div className="container">
                         <div className="row">

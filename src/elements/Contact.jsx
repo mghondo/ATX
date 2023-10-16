@@ -9,6 +9,10 @@ import { FiChevronUp } from "react-icons/fi";
 import Header from "../component/header/Header";
 import Footer from "../component/footer/Footer";
 import Breadcrumb2_0 from "./common/BreadCrumb2.0";
+import Breadcrumb from "./common/Breadcrumb";
+import Scrollspy from "react-scrollspy";
+import { FiMenu, FiX } from "react-icons/fi";
+import { Helmet } from "react-helmet";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
@@ -37,6 +41,7 @@ class Contact extends Component{
             <React.Fragment>
                 <PageHelmet pageTitle='Contact' />
 
+                {/* End Header Area  */}
                 <Header headertransparent="header--transparent" colorblack="color--black" logoname="logo.png" />
 
                  {/* Start Breadcrump Area bg_image--17 */}
@@ -55,12 +60,15 @@ class Contact extends Component{
                         </div>
                     </div>
                 </div> */}
-                            <Breadcrumb2_0
+                            {/* <Breadcrumb2_0
         title="Contact Us"
         parent=""
         backgroundImage="/assets/images/blog/ZachandJay.jpg"
         dataBlackOverlay={4}
-      />
+      /> */}
+       <Breadcrumb title={'Contact'}   />
+
+       <Helmet pageTitle="Interior Design" />
 
                       {/* Start Contact Page Area  */}
                 <div className="rn-contact-page ptb--120 bg_color--1" style={{backgroundColor: '#f3edd1', paddingTop: '100px', paddingBottom:'50px'}}>

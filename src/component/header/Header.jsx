@@ -1,36 +1,50 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import { FiX , FiMenu } from "react-icons/fi";
+import './header.css';
 
 
 
 const headerStyle = {
     backgroundImage: `url('/assets/images/IMG_6288.png')`,
+    position: 'top'
     // backgroundImage: `url('/assets/images/bg/ATXBanner.jpg')`,
   };
-class Header extends Component{
+
+
+  class Header extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            scrolled: false,
+        };
         this.menuTrigger = this.menuTrigger.bind(this);
         this.CLoseMenuTrigger = this.CLoseMenuTrigger.bind(this);
-       //  this.subMetuTrigger = this.subMetuTrigger.bind(this);
-        window.addEventListener('load', function() {
-            console.log('All assets are loaded')
-        })
     }
 
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
+    handleScroll = () => {
+        if (window.scrollY > 0) {
+            this.setState({ scrolled: true });
+        } else {
+            this.setState({ scrolled: false });
+        }
+    }
 
     menuTrigger() {
-        document.querySelector('.header-wrapper').classList.toggle('menu-open')
+        document.querySelector('.header-wrapper').classList.toggle('menu-open');
     }
 
     CLoseMenuTrigger() {
         document.querySelector('.header-wrapper').classList.remove('menu-open');
     }
-
-    
-
-
     render(){
         var elements = document.querySelectorAll('.has-droupdown > a');
         for(var i in elements) {
@@ -41,7 +55,11 @@ class Header extends Component{
                 }
             }
         }
-        const { logo, color='default-color' } = this.props;
+        const { logo, color = 'default-color' } = this.props;
+        const headerClass = this.state.scrolled ? 'header-area formobile-menu header--transparent scrolled' : 'header-area formobile-menu header--transparent';
+        const fixedClass = this.state.scrolled ? 'fixed-menu' : '';
+        const showMenu = this.state.scrolled ? 'block' : 'none'; // Add this line
+
         let logoUrl= <img src="/assets/images/logo/ATX_Logo_6dcef0.png" style={{ maxWidth: '300px', maxHeight: '40px'  }} alt="Digital Agency" />;
         // if(logo === 'light'){
         //     logoUrl = <img src="/assets/images/logo/" alt="Digital Agency" />;
@@ -59,9 +77,9 @@ class Header extends Component{
 
         
         return(
-            <header className={`header-area formobile-menu header--transparent ${color}`} style={{ backgroundImage: `url(${this.props.backgroundImage})`, backgroundSize: 'cover', }}>
-                
-            {/* <header className={`header-area formobile-menu header--transparent ${color}`}> */}
+            // <header className={`header-area formobile-menu header--transparent ${color}`} style={{ backgroundImage: `url(${this.props.backgroundImage})`, backgroundSize: 'cover', }}>
+            // <header className={`header-area formobile-menu header--transparent ${color}`} style={{ backgroundColor: this.state.scrolled ? '#343c44' : 'transparent' }}>
+            <header className={`${headerClass} ${fixedClass}`} style={{padding: '0px', opacity: this.state.scrolled ? 1 : 0, display: this.state.scrolled ? 'block' : 'none' }}>
                 <div className="header-wrapper" id="header-wrapper">
                     <div className="header-left">
                         <div className="logo">
@@ -72,7 +90,8 @@ class Header extends Component{
                             </a>
                         </div>
                     </div>
-                    <div className="header-right">
+                    {/* <div className="header-right"> */}
+                    <div className="header-right" style={{ display: showMenu }}>
                         <nav className="mainmenunav d-lg-block" style={{fontFamily: 'Brice-Light'}} >
                             <ul className="mainmenu">
                             <li><Link to="/portfolio" style={{fontFamily:'Brice-Black'}}>Catalog</Link>

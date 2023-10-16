@@ -18,7 +18,7 @@ const FooterTwo = () => {
                     <div className="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div className="inner">
                             <div className="logo text-center text-sm-left mb_sm--20">
-                                <a href="/home-one">
+                                <a href="/">
                                     {/* <img src="/assets/images/logo/logo.png" alt="Logo images"/> */}
                                     <img src="/assets/images/logo/ATX_Logo_6dcef0.png" alt="Logo images"/> 
                                     {/* trydo/src/component/footer/ATX_Logo_6dcef0.png */}

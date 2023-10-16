@@ -1,0 +1,26 @@
+/* header.css */
+.header-area {
+    transition: opacity 0.9s ease;
+    /* Add this transition property for smooth fade effect */
+}
+
+.header-area.fixed-menu {
+    opacity: 1; /* Initially fully visible */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #343c44;
+    z-index: 100;
+    transition: background-color 0.3s;
+}
+
+.header-area.fixed-menu.scrolled {
+    opacity: 1; /* Maintain full visibility when scrolling */
+    background-color: #343c44; /* Set the background color for the fixed menu when scrolled */
+    transition: background-color 0.3s;
+}
+
+.header-area .header-wrapper{
+    padding: 0px 40px;
+}
