@@ -101,6 +101,7 @@ const headerStyle = {
                                     <li><a href="/portfolio#awesomeGear">Awesome Gear</a></li>
                                 </ul>
                                 </li>
+                                {/* <li><Link to="/" >Home</Link></li> */}
                                 {/* <li className="has-droupdown"><Link to="/">Home</Link></li> */}
                                     {/* <ul className="submenu">
                                         <li><Link to="/main-demo">Main Demo</Link></li>

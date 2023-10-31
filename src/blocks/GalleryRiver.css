@@ -8,3 +8,59 @@
     background-color: white !important;
     opacity: 1 !important;
 }
+
+/* Update your CSS file */
+/* ... other CSS rules ... */
+
+/* Update your CSS file */
+/* ... other CSS rules ... */
+
+.item-portfolio-static .thumbnail-inner {
+    position: relative;
+    overflow: hidden;
+    height: 500px; /* Set the fixed height */
+}
+
+.item-portfolio-static .thumbnail-inner .thumbnail {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.item-portfolio-static .thumbnail-inner .thumbnail a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.item-portfolio-static .thumbnail-inner .thumbnail a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container */
+    object-position: center; /* Center the image if it's larger than the container */
+}
+
+/* ... other CSS rules ... */
+
+
+/* ... other CSS rules ... */
+@media (max-width: 1200px) {
+    .thumbnail-inner {
+        height: 400px !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .productImg {
+    padding: 15px 0 !important;
+    margin-top: 0px;
+}
+.classIWant {
+    padding-bottom: 0px !important;
+}
+}

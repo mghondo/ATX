@@ -13,6 +13,7 @@ import PortfolioListNew from "../elements/portfolio/PortfolioListNew";
 import { Parallax } from "react-parallax";
 
 const image1 = '/assets/images/bg/riverTube2.0.png';
+const image2 = '/assets/images/bg/riverTube2.0.png'
 
 const portfolioItems = [
     {
@@ -218,7 +219,7 @@ const Portfolio = () => {
                                 <Parallax bgImage={image1} strength={800} style={{padding: '70px',}}>
                                     <div className="section-title text-center service-style--3 mb--30">
                                         <h2 style={{fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}} data-aos="fade-up" data-aos-duration="750"  className="title">River Tubes</h2>
-                                        <p style={{color:'white', fontFamily: 'Brice-Light'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+                                        {/* <p style={{color:'white', fontFamily: 'Brice-Light'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p> */}
                                     </div>
                                     </Parallax>
                                 </div>
@@ -246,7 +247,7 @@ const Portfolio = () => {
                                 <Parallax bgImage={image1} strength={800} style={{padding: '70px',}}>
                                     <div className="section-title text-center service-style--3 mb--30">
                                         <h2 style={{fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}} data-aos="fade-up" data-aos-duration="750"  className="title">Park Tubes</h2>
-                                        <p style={{color:'white', fontFamily: 'Brice-Light'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+                                        {/* <p style={{color:'white', fontFamily: 'Brice-Light'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p> */}
                                     </div>
                                     </Parallax>
                                 </div>
@@ -274,7 +275,7 @@ const Portfolio = () => {
                                 <Parallax bgImage={image1} strength={800} style={{padding: '70px',}}>
                                     <div className="section-title text-center service-style--3 mb--30">
                                         <h2 style={{fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}} className="title" data-aos="fade-up" data-aos-duration="750" >Awesome Gear</h2>
-                                        <p style={{color:'white', fontFamily: 'Brice-Light'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+                                        {/* <p style={{color:'white', fontFamily: 'Brice-Light'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p> */}
                                     </div>
                                     </Parallax>
                                 </div>

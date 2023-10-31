@@ -88,7 +88,7 @@ const Team10  = (props) => {
                 </div>
                 <div className="col-lg-6" style={{padding: '30px'}}>
                                 <div className='staffPersonal'>
-                            <h2 style={{ color: '#EF5474', fontFamily: 'Brice-Black', textAlign: 'center', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }} data-aos="fade-up" data-aos-duration="750">Morgan Hondros</h2>
+                            <h2 style={{ color: '#EF5474', fontFamily: 'Brice-Black', textAlign: 'center', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)', fontSize: '40px' }} data-aos="fade-up" data-aos-duration="750">Morgan Hondros</h2>
                             <p style={{color: 'white', fontFamily: 'Brice-Light'}}>Morgan Hondros is an accomplished web developer with an extensive background in web development, amassing eight years of hands-on experience in the field. His expertise spans various web technologies, with a strong focus on WordPress, Angular, and, most notably, React. As a seasoned React developer, Morgan excels in creating dynamic, interactive, and user-friendly web applications that provide a seamless and engaging user experience. Morgan's commitment to perfection sets him apart in the web development industry. He is known for his meticulous attention to detail and a relentless pursuit of the best-looking and cleanest solutions. This dedication ensures that the websites and web applications he creates not only function flawlessly but also exhibit a high level of visual appeal.</p>
                         </div>
 

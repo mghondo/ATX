@@ -58,6 +58,13 @@ import PricingTable from "./blocks/PricingTable";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
 import GalleryRiver from "./blocks/GalleryRiver";
+import BevieSling from "./elements/productComps/BevieSling";
+import CoolJug from "./elements/productComps/CoolJug";
+import DrawStringBags from "./elements/productComps/DrawStringBags";
+import DryBagSolidNylon from "./elements/productComps/DryBagSolidNylon";
+import DryBagCamoNylon from "./elements/productComps/DryBagCamoNylon";
+
+// Product Pages
 
 class Root extends Component {
   render() {
@@ -70,6 +77,52 @@ class Root extends Component {
               exact
               path={`${process.env.PUBLIC_URL}/`}
               component={InteriorLanding}
+            />
+            <Route
+              exact
+              path={`${process.env.PUBLIC_URL}/about`}
+              component={About}
+            />
+            <Route
+              exact
+              path={`${process.env.PUBLIC_URL}/contact`}
+              component={Contact}
+            />
+            <Route
+              exact
+              path={`${process.env.PUBLIC_URL}/portfolio`}
+              component={Portfolio}
+            />
+            {/* Product Pages */}
+            <Route
+              exact
+              path={`${process.env.PUBLIC_URL}/beviesling`}
+              component={BevieSling}
+            />
+            <Route
+              exact
+              path={`${process.env.PUBLIC_URL}/cooljug`}
+              component={CoolJug}
+            />
+            <Route
+              exact
+              path={`${process.env.PUBLIC_URL}/drawstringbags`}
+              component={DrawStringBags}
+            />
+            <Route
+              exact
+              path={`${process.env.PUBLIC_URL}/drybagsolidnylon`}
+              component={DryBagSolidNylon}
+            />
+            <Route
+              exact
+              path={`${process.env.PUBLIC_URL}/drybagcamonylon`}
+              component={DryBagCamoNylon}
+            />
+            <Route
+              exact
+              path={`${process.env.PUBLIC_URL}/main-demo`}
+              component={MainDemo}
             />
             <Route
               exact
@@ -91,7 +144,6 @@ class Root extends Component {
               path={`${process.env.PUBLIC_URL}/paralax`}
               component={Paralax}
             />
-
             <Route
               exact
               path={`${process.env.PUBLIC_URL}/digital-agency`}
@@ -167,7 +219,6 @@ class Root extends Component {
               path={`${process.env.PUBLIC_URL}/interactive-agency`}
               component={InteractiveAgency}
             />
-
             {/* Element Layot */}
             <Route
               exact
@@ -178,16 +229,6 @@ class Root extends Component {
               exact
               path={`${process.env.PUBLIC_URL}/service-details`}
               component={ServiceDetails}
-            />
-            <Route
-              exact
-              path={`${process.env.PUBLIC_URL}/contact`}
-              component={Contact}
-            />
-            <Route
-              exact
-              path={`${process.env.PUBLIC_URL}/about`}
-              component={About}
             />
             <Route
               exact
@@ -204,7 +245,6 @@ class Root extends Component {
               path={`${process.env.PUBLIC_URL}/blog-details`}
               component={BlogDetails}
             />
-
             {/* Blocks Elements  */}
             <Route
               exact
@@ -271,12 +311,12 @@ class Root extends Component {
               path={`${process.env.PUBLIC_URL}/pricing-table`}
               component={PricingTable}
             />
-
             <Route
               path={`${process.env.PUBLIC_URL}/404`}
               component={error404}
             />
             <Route component={error404} />
+            {/* product pages below */}
           </Switch>
         </PageScrollTop>
       </BrowserRouter>

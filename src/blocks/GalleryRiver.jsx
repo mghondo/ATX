@@ -119,14 +119,14 @@ class GalleryRiver extends Component {
                                                     <div className="thumbnail" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
                                                         <a href="#portfolio-details" >
                                                             {/* <img src={`/assets/images/portfolio/dp-portfolio-${value.image}.jpg`} alt="Portfolio Images"/> */}
-                                                            <img src={`${value.bigImage}`} style={{ maxWidth: '100%', maxHeight: '100%' }} alt="Portfolio Images"/>
+                                                            <img src={`${value.bigImage}`} style={{ maxWidth: '100%', height: '500px' }} alt="Portfolio Images"/>
                                                         </a>
                                                     </div>
                                                 </div>
                                                 <div className="content">
                                                     <div className="inner">
-                                                        <p style={{color:'black', textAlign:'center'}}>{value.category}</p>
-                                                        <h4 style={{color:'black', textAlign:'center'}}><a href="#portfolio-details" style={{color:'black'}}>{value.title}</a></h4>
+                                                        <p style={{color: 'grey', fontFamily: 'Brice-Light', textAlign:'center'}}>{value.category}</p>
+                                                        <h4 style={{ fontFamily: 'Brice-Light', textAlign:'center'}}><a href="#portfolio-details" style={{color:'black'}}>{value.title}</a></h4>
                                                     </div>
                                                 </div>
                                             </div>

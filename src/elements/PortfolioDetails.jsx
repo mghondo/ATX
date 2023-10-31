@@ -51,9 +51,9 @@ const images = [
   ];
 
 const SocialShare = [
-    {Social: <FaFacebookF /> , link: 'https://www.facebook.com/'},
+    {Social: <FaFacebookF /> , link: 'https://www.facebook.com/atxfloat/'},
     // {Social: <FaLinkedinIn /> , link: 'https://www.linkedin.com/'},
-    {Social: <FaInstagram /> , link: 'https://www.instagram.com/'},
+    {Social: <FaInstagram /> , link: 'https://www.instagram.com/atx.float/'},
     // {Social: <FaTwitter /> , link: 'https://twitter.com/'},
 ]
 
@@ -142,7 +142,7 @@ class PortfolioDetails extends Component{
                                         <div className="portfolio-share-link mt--20 pb--70 pb_sm--40">
                                             <ul className="social-share rn-lg-size d-flex justify-content-start liststyle mt--15" >
                                                 {SocialShare.map((val , i) => (
-                                                    <li key={i}><a href={`${val.link}`} style={{borderColor:'grey', color: 'grey', fontFamily: 'Brice-Light'}}>{val.Social}</a></li>
+                                                    <li key={i}><a href={`${val.link}`} target="_blank" style={{borderColor:'grey', color: 'grey', fontFamily: 'Brice-Light'}}>{val.Social}</a></li>
                                                 ))}
                                             </ul>
                                         </div>
@@ -182,8 +182,8 @@ class PortfolioDetails extends Component{
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="section-title text-center">
-                                    <span className="theme-color font--18 fontWeight600">Related Work</span>
-                                    <h2>Our More Projects</h2>
+                                    <h3 style={{color: '#ef5474', fontFamily: 'Brice-Black', fontSize: '32', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}}>Related Work</h3>
+                                    <h2 style={{ color: '#00f2ff', fontFamily: 'Brice-Light', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}}>More Cool Stuff</h2>
                                 </div>
                             </div>
                         </div>

@@ -57,7 +57,7 @@ class Footer extends Component{
                                             <div className="footer-link">
                                                 <h4 style={{fontFamily: 'Brice-Light', color: 'white'}}>Say Hello</h4>
                                                 <ul className="ft-link">
-                                                    <li style={{fontFamily: 'Brice-Light'}}><a href="mailto:admin@example.com">team@atxfloat.com</a></li>
+                                                    <li style={{fontFamily: 'Brice-Light'}}><a href="mailto:team@atxfloat.com">team@atxfloat.com</a></li>
                                                     <li style={{fontFamily: 'Brice-Light'}}><a href="tel:+1-512-210-5959">1-512-210-5959</a></li>
                                                 </ul>
 

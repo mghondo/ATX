@@ -54,7 +54,7 @@ class Portfolio extends Component{
                 {/* End Breadcrump Area */}
 
                 {/* Start Portfolio Area */}
-                <div className="portfolio-area pt--120 pb--140 bg_color--5">
+                <div className="portfolio-area pt--120 pb--140 bg_color--5" style={{ paddingBottom: '40px'}}>
                     <div className="rn-slick-dot">
                         <div className="container">
                             <div className="row">
