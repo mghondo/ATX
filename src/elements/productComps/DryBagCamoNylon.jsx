@@ -18,6 +18,13 @@ import 'aos/dist/aos.css';
 const photos = [
     {
         image: '02',
+        bigImage: '/assets/images/NewImages10.23.2023/Lifestyle Photos/AJS_4290.jpg',
+        category: '',
+        title: '',
+        css: {},
+    },
+    {
+        image: '02',
         bigImage: '/assets/images/NewImages10.23.2023/Merchandise/Dry_Bag_10L_Nylon_Camo/Dry_Bag_Nylon_10L_Assorted_Camo.jpg',
         category: '',
         title: '',
@@ -121,7 +128,7 @@ class DryBagCamoNylon extends Component{
                 <Header headertransparent="header--transparent" colorblack="color--black" logoname="logo.png" />
                 
                 {/* Start Breadcrump Area */}
-                <div className="rn-page-title-area pt--120 pb--190 bg_image"  data-black-overlay="3" style={{backgroundImage: `url(/assets/images/NewImages10.23.2023/Merchandise/Dry_Bag_10L_Nylon_Camo/Dry_Bag_Nylon_10L_Assorted_Camo.jpg)`, backgroundPosition: 'center 25%', }}>
+                <div className="rn-page-title-area pt--120 pb--190 bg_image"  data-black-overlay="3" style={{backgroundImage: `url(/assets/images/NewImages10.23.2023/AJS_4290.jpg)`, backgroundPosition: 'center 25%', }}>
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
@@ -179,10 +186,46 @@ class DryBagCamoNylon extends Component{
             textAlign: 'center',
         }}
     >
-GET INFO ON THIS PRODUCT. Highly insulated to keep drink cold for the day. Sipping nozzle pivots open and closed for a watertight seal. Top lid seals tight with a Silicone gasket for leak-free enjoyment. Side-handle provides solid grip. Removable strap for carrying by hand or over the shoulder. Attach to equipment with included Carabiner clip.  </p>
+Lightweight and strong Ripstop Nylon with Waterproof UV coating on inside and smooth Silicon outer coating. Roll- top clipped closure. These dry bags float if dropped in the water and are perfect for keeping belongings 100% dry.</p>
 </div>
 
+{/* Product SKU Area */}
 <div className="inner" >
+<div className="portfolio-view-list d-flex flex-wrap justify-content-center align-items-center" style={{ paddingTop: '30px' }}>
+    <div className="port-view">
+        <h4 style={{ color: 'black', fontFamily: 'Brice-Light' }}>SKU: ATX-DB10LC</h4>
+    </div>
+</div>
+</div>
+<div className="inner" >
+    <div className="portfolio-view-list d-flex flex-wrap justify-content-center align-items-center" style={{ paddingTop: '30px' }}>
+    <div className="port-view">
+        <div className="text-center" style={{display: 'block', marginBottom: '30px'}}>
+            <img src="/assets/images/barCodes/solidCamoBag.jpg" alt="" />
+        </div>
+    </div>
+    <div className="port-view">
+        <h4 style={{ color: 'black', fontFamily: 'Brice-Light', textAlign: 'center', fontSize: '1rem' }}>
+        Assorted Packaging:
+Master Carton: 240pcs Inner Carton: 40pcs
+(10 Blue, 10 Orange, 10 Pink, 10 Green)
+
+        </h4>
+    </div>
+    <div className="port-view">
+        <h4 style={{ color: 'black', fontFamily: 'Brice-Light', fontSize: '1rem' }}>
+            FOB New Braunfels TX
+        </h4>
+    </div>
+
+</div>
+<div className="port-view">
+        <div className="text-center" style={{display: 'block', marginBottom: '30px'}}>
+            <h4 style={{ color: 'black', fontFamily: 'Brice-Light', fontSize: '1rem' }}>
+            *Floor displays available.
+            </h4>
+            </div>
+    </div> 
                                         {/* <div className="row">
                                         <div className="col-lg-6">        */}
 

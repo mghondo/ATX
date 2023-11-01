@@ -170,19 +170,74 @@ class DryBagSolidNylon extends Component{
         data-aos-duration="750"
         className="subtitle"
     >
-        Double-wall with special insulation keeps beverages ice-cold.
+        Waterproff
+Ripstop Nylon
+    </h2>
+    <h2
+        style={{
+            color: 'black',
+            fontFamily: 'Brice-Light',
+ 
+            textAlign: 'center',
+            fontSize: '1.5rem',
+            paddingTop: '15px',
+            paddingBottom: '15px'
+        }}
+        data-aos="fade-up"
+        data-aos-duration="750"
+        className="subtitle"
+    >
+10 Litre
     </h2>
     <p
         style={{
             color: 'black',
             fontFamily: 'Brice-Light',
             textAlign: 'center',
+            margin: '30px'
         }}
     >
-GET INFO ON THIS PRODUCT. Highly insulated to keep drink cold for the day. Sipping nozzle pivots open and closed for a watertight seal. Top lid seals tight with a Silicone gasket for leak-free enjoyment. Side-handle provides solid grip. Removable strap for carrying by hand or over the shoulder. Attach to equipment with included Carabiner clip.  </p>
+Lightweight and strong Ripstop Nylon with Waterproof UV coating on inside and smooth Silicon outer coating. Roll- top clipped closure. These dry bags float if dropped in the water and are perfect for keeping belongings 100% dry.
+</p>
 </div>
 
+{/* Product SKU Area */}
 <div className="inner" >
+<div className="portfolio-view-list d-flex flex-wrap justify-content-center align-items-center" style={{ paddingTop: '30px' }}>
+    <div className="port-view">
+        <h4 style={{ color: 'black', fontFamily: 'Brice-Light' }}>SKU: ATX-DB10L</h4>
+    </div>
+</div>
+</div>
+<div className="inner" >
+    <div className="portfolio-view-list d-flex flex-wrap justify-content-center align-items-center" style={{ paddingTop: '30px' }}>
+    <div className="port-view">
+        <div className="text-center" style={{display: 'block', marginBottom: '30px'}}>
+            <img src="/assets/images/barCodes/solidDryBag.jpg" alt="" />
+        </div>
+    </div>
+    <div className="port-view">
+        <h4 style={{ color: 'black', fontFamily: 'Brice-Light', textAlign: 'center', fontSize: '1rem' }}>
+        Assorted Packaging:
+Master Carton: 240pcs Inner Carton: 40pcs
+(10 Blue, 10 Orange, 10 Pink, 10 Green)
+
+        </h4>
+    </div>
+    <div className="port-view">
+        <h4 style={{ color: 'black', fontFamily: 'Brice-Light', fontSize: '1rem' }}>
+            FOB New Braunfels TX
+        </h4>
+    </div>
+
+</div>
+<div className="port-view">
+        <div className="text-center" style={{display: 'block', marginBottom: '30px'}}>
+            <h4 style={{ color: 'black', fontFamily: 'Brice-Light', fontSize: '1rem' }}>
+            *Floor displays available.
+            </h4>
+            </div>
+    </div> 
                                         {/* <div className="row">
                                         <div className="col-lg-6">        */}
 

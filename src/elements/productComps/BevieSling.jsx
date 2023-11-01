@@ -243,7 +243,32 @@ class BevieSling extends Component{
     </p>
 </div>
 
+{/* Product SKU Area */}
 <div className="inner" >
+<div className="portfolio-view-list d-flex flex-wrap justify-content-center align-items-center" style={{ paddingTop: '30px' }}>
+    <div className="port-view">
+        <h4 style={{ color: 'black', fontFamily: 'Brice-Light' }}>SKU: ATX-BS03</h4>
+    </div>
+</div>
+</div>
+<div className="inner" >
+    <div className="portfolio-view-list d-flex flex-wrap justify-content-center align-items-center" style={{ paddingTop: '30px' }}>
+    <div className="port-view">
+        <div className="text-center" style={{display: 'block', marginBottom: '30px'}}>
+            <img src="/assets/images/barCodes/bevieSling.jpg" alt="" />
+        </div>
+    </div>
+    <div className="port-view">
+        <h4 style={{ color: 'black', fontFamily: 'Brice-Light', textAlign: 'center', fontSize: '1rem' }}>
+        Master Carton: 240pcs Inner Poly Bag: 20pcs (5 Green, 5 Blue, 5 Orange, 5 Pink)
+        </h4>
+    </div>
+    <div className="port-view">
+        <h4 style={{ color: 'black', fontFamily: 'Brice-Light', fontSize: '1rem' }}>
+            FOB New Braunfels TX
+        </h4>
+    </div>
+</div>
                                         {/* <div className="row">
                                         <div className="col-lg-6">        */}
 

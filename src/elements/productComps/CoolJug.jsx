@@ -209,7 +209,39 @@ class CoolJug extends Component{
 Highly insulated to keep drink cold for the day. Sipping nozzle pivots open and closed for a watertight seal. Top lid seals tight with a Silicone gasket for leak-free enjoyment. Side-handle provides solid grip. Removable strap for carrying by hand or over the shoulder. Attach to equipment with included Carabiner clip.  </p>
 </div>
 
+{/* Product SKU Area */}
 <div className="inner" >
+<div className="portfolio-view-list d-flex flex-wrap justify-content-center align-items-center" style={{ paddingTop: '30px' }}>
+    <div className="port-view">
+        <h4 style={{ color: 'black', fontFamily: 'Brice-Light' }}>SKU: ATX-CJUG3</h4>
+    </div>
+</div>
+</div>
+<div className="inner" >
+    <div className="portfolio-view-list d-flex flex-wrap justify-content-center align-items-center" style={{ paddingTop: '30px' }}>
+    <div className="port-view">
+        <div className="text-center" style={{display: 'block', marginBottom: '30px'}}>
+            <img src="/assets/images/barCodes/CoolJug.jpg" alt="" />
+        </div>
+    </div>
+    <div className="port-view">
+        <h4 style={{ color: 'black', fontFamily: 'Brice-Light', textAlign: 'center', fontSize: '1rem' }}>
+        Assorted Packaging:
+Master Carton: 24pcs
+(12 Steel Blue, 12 Mustard Yellow)
+        </h4>
+    </div>
+    <div className="port-view">
+        <h4 style={{ color: 'black', fontFamily: 'Brice-Light', fontSize: '1rem' }}>
+            FOB New Braunfels TX
+        </h4>
+    </div>
+</div>
+
+
+
+
+
                                         {/* <div className="row">
                                         <div className="col-lg-6">        */}
 

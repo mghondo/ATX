@@ -63,6 +63,14 @@ import CoolJug from "./elements/productComps/CoolJug";
 import DrawStringBags from "./elements/productComps/DrawStringBags";
 import DryBagSolidNylon from "./elements/productComps/DryBagSolidNylon";
 import DryBagCamoNylon from "./elements/productComps/DryBagCamoNylon";
+import SunglassesFloater from "./elements/productComps/SunglassesFloater";
+import FloatPouchSolid from "./elements/productComps/FloatPouchSolid";
+import FloatPouchCamo from "./elements/productComps/FloatPouchCamo";
+import FloatPouchHolo from "./elements/productComps/FloatPouchHolo";
+import USColorWay from "./elements/productComps/USColorWay";
+import DryBagSolidNylon15 from "./elements/productComps/DryBagSolid15";
+import DryBagTranslucent15 from "./elements/productComps/DryBagTranslucent15";
+import DryBagHolographic15 from "./elements/productComps/DryBagHolographic15";
 
 // Product Pages
 
@@ -119,6 +127,49 @@ class Root extends Component {
               path={`${process.env.PUBLIC_URL}/drybagcamonylon`}
               component={DryBagCamoNylon}
             />
+            <Route
+              exact
+              path={`${process.env.PUBLIC_URL}/sunglassesfloater`}
+              component={SunglassesFloater}
+            />
+            <Route
+              exact
+              path={`${process.env.PUBLIC_URL}/floatpouchsolid`}
+              component={FloatPouchSolid}
+            />
+            <Route
+              exact
+              path={`${process.env.PUBLIC_URL}/floatpouchcamo`}
+              component={FloatPouchCamo}
+            />
+            <Route
+              exact
+              path={`${process.env.PUBLIC_URL}/floatpouchholo`}
+              component={FloatPouchHolo}
+            />
+            <Route
+              exact
+              path={`${process.env.PUBLIC_URL}/uscolorway`}
+              component={USColorWay}
+            />
+            <Route
+              exact
+              path={`${process.env.PUBLIC_URL}/drybagsolidnylon15`}
+              component={DryBagSolidNylon15}
+            />
+            <Route
+              exact
+              path={`${process.env.PUBLIC_URL}/drybagtrasnlucent15`}
+              component={DryBagTranslucent15}
+            />
+            <Route
+              exact
+              path={`${process.env.PUBLIC_URL}/drybagholographic15`}
+              component={DryBagHolographic15}
+            />
+
+            {/* End of Products */}
+
             <Route
               exact
               path={`${process.env.PUBLIC_URL}/main-demo`}

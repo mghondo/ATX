@@ -247,13 +247,13 @@ class DrawStringBags extends Component{
             fontFamily: 'Brice-Black',
             textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)',
             textAlign: 'center',
-            fontSize: '2.5rem'
+            fontSize: '2rem'
         }}
         data-aos="fade-up"
         data-aos-duration="750"
         className="subtitle"
     >
-        Double-wall with special insulation keeps beverages ice-cold.
+       210 D RIP-STOP POLYESTER WITH ZIPPER POCKET
     </h2>
     <p
         style={{
@@ -262,10 +262,50 @@ class DrawStringBags extends Component{
             textAlign: 'center',
         }}
     >
-GET INFO ON THIS PRODUCT. Highly insulated to keep drink cold for the day. Sipping nozzle pivots open and closed for a watertight seal. Top lid seals tight with a Silicone gasket for leak-free enjoyment. Side-handle provides solid grip. Removable strap for carrying by hand or over the shoulder. Attach to equipment with included Carabiner clip.  </p>
+Water resistant tote bag, perfect for a change of clothes, swim suit, belongings while a the park. Made with stong Rip-Stop material for maximum durability and visually appealing pattern sheen.</p>
 </div>
 
+{/* Product SKU Area */}
 <div className="inner" >
+<div className="portfolio-view-list d-flex flex-wrap justify-content-center align-items-center" style={{ paddingTop: '10px' }}>
+    <div className="port-view">
+        <h4 style={{ color: 'black', fontFamily: 'Brice-Light' }}>SKU: ATX-DS210D</h4>
+    </div>
+</div>
+</div>
+<div className="inner" >
+    <div className="portfolio-view-list d-flex flex-wrap justify-content-center align-items-center" style={{ paddingTop: '10px' }}>
+    {/* <div className="port-view">
+        <div className="text-center" style={{display: 'block', marginBottom: '30px'}}>
+            <img src="/assets/images/barCodes/CoolJug.jpg" alt="" />
+        </div>
+    </div> */}
+    <div className="port-view">
+        <h4 style={{ color: 'black', fontFamily: 'Brice-Light', textAlign: 'center', fontSize: '1rem' }}>
+        Assorted Packaging: Inner Case: 40pcs Master Carton: 240pcs
+        </h4>
+    </div>
+    <div className="inner" >
+    <div className="portfolio-view-list d-flex flex-wrap justify-content-center align-items-center" style={{ paddingTop: '10px' }}>
+    <div className="port-view">
+        <div className="text-center" style={{display: 'block', marginBottom: '10px'}}>
+            <h4 style={{ color: 'black', fontFamily: 'Brice-Light', fontSize: '1rem' }}>
+                FOB New Braunfels TX
+            </h4>
+            </div>
+    </div>
+    {/* <div className="port-view">
+        <div className="text-center" style={{display: 'block', marginBottom: '30px'}}>
+            <h4 style={{ color: 'black', fontFamily: 'Brice-Light', fontSize: '1rem' }}>
+            *Floor displays available.
+            </h4>
+            </div>
+    </div> */}
+        </div>
+    </div>
+</div>
+
+
                                         {/* <div className="row">
                                         <div className="col-lg-6">        */}
 
