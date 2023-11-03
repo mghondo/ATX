@@ -71,6 +71,8 @@ import USColorWay from "./elements/productComps/USColorWay";
 import DryBagSolidNylon15 from "./elements/productComps/DryBagSolid15";
 import DryBagTranslucent15 from "./elements/productComps/DryBagTranslucent15";
 import DryBagHolographic15 from "./elements/productComps/DryBagHolographic15";
+import GogglesAdult from "./elements/productComps/GogglesAdult";
+import GogglesKids from "./elements/productComps/GogglesKids";
 
 // Product Pages
 
@@ -91,6 +93,11 @@ class Root extends Component {
               path={`${process.env.PUBLIC_URL}/about`}
               component={About}
             />
+            {/* <Route
+              exact
+              path={`${process.env.PUBLIC_URL}/portfolio`}
+              component={Portfolio}
+            /> */}
             <Route
               exact
               path={`${process.env.PUBLIC_URL}/contact`}
@@ -167,121 +174,131 @@ class Root extends Component {
               path={`${process.env.PUBLIC_URL}/drybagholographic15`}
               component={DryBagHolographic15}
             />
+            <Route
+              exact
+              path={`${process.env.PUBLIC_URL}/gogglesAdult`}
+              component={GogglesAdult}
+            />
+            <Route
+              exact
+              path={`${process.env.PUBLIC_URL}/gogglesKids`}
+              component={GogglesKids}
+            />
 
             {/* End of Products */}
 
-            <Route
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/main-demo`}
               component={MainDemo}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/main-demo`}
               component={MainDemo}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/dark-main-demo`}
               component={DarkMainDemo}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/startup`}
               component={Startup}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/paralax`}
               component={Paralax}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/digital-agency`}
               component={DigitalAgency}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/creative-agency`}
               component={CreativeAgency}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/personal-portfolio`}
               component={PersonalPortfolio}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/studio-agency`}
               component={StudioAgency}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/business`}
               component={Business}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/portfolio-home`}
               component={HomePortfolio}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/portfolio-landing`}
               component={PortfolioLanding}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/creative-landing`}
               component={CreativeLanding}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/home-particles`}
               component={HomeParticles}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/dark-portfolio-landing`}
               component={DarkPortfolioLanding}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/designer-portfolio`}
               component={DesignerPortfolio}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/creative-portfolio`}
               component={CreativePortfolio}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/interior-landing`}
               component={InteriorLanding}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/corporate-business`}
               component={CorporateBusiness}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/interactive-agency`}
               component={InteractiveAgency}
-            />
+            /> */}
             {/* Element Layot */}
-            <Route
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/service`}
               component={Service}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/service-details`}
               component={ServiceDetails}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/portfolio-details`}
               component={PortfolioDetails}
@@ -290,78 +307,74 @@ class Root extends Component {
               exact
               path={`${process.env.PUBLIC_URL}/blog`}
               component={Blog}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/blog-details`}
               component={BlogDetails}
-            />
+            /> */}
             {/* Blocks Elements  */}
-            <Route
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/team`}
               component={Team}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/counters`}
               component={Counters}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/testimonial`}
               component={Testimonial}
-            />
-            <Route
-              exact
-              path={`${process.env.PUBLIC_URL}/portfolio`}
-              component={Portfolio}
-            />
-            <Route
+            /> */}
+
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/video-popup`}
               component={VideoPopup}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/gallery`}
               component={Gallery}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/galleryriver`}
               component={GalleryRiver}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/clint-logo`}
               component={Brand}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/progressbar`}
               component={ProgressBar}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/contact-form`}
               component={ContactForm}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/google-map`}
               component={GoogleMap}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/columns`}
               component={Columns}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact
               path={`${process.env.PUBLIC_URL}/pricing-table`}
               component={PricingTable}
-            />
+            /> */}
             <Route
               path={`${process.env.PUBLIC_URL}/404`}
               component={error404}

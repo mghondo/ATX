@@ -115,6 +115,13 @@ const photos = [
         title: '',
         css: {}, // Define the CSS properties as an object
     },
+    {
+        image: '02',
+        bigImage: '/assets/images/NewImages10.23.2023/Lifestyle Photos/AJS_4290.jpg',
+        category: '',
+        title: '',
+        css: {}, // Define the CSS properties as an object
+    },
     // Add more photo objects as needed
 ];
 
@@ -292,19 +299,19 @@ class BevieSling extends Component{
 
       <div className="portfolio-view-list d-flex flex-wrap" style={{ paddingTop: '30px', justifyContent: 'center' }}>
     <div className="port-view">
-        <h4 style={{ color: 'black', fontFamily: 'Brice-Light' }}>Blue</h4>
+        <h4 data-aos="fade-right" style={{ color: 'black', fontFamily: 'Brice-Light' }}>Blue</h4>
     </div>
 
     <div className="port-view">
-        <h4 style={{ color: 'black', fontFamily: 'Brice-Light' }}>Orange</h4>
+        <h4 data-aos="fade-up" style={{ color: 'black', fontFamily: 'Brice-Light' }}>Orange</h4>
     </div>
 
     <div className="port-view">
-        <h4 style={{ color: 'black', fontFamily: 'Brice-Light' }}>Green</h4>
+        <h4 data-aos="fade-down" style={{ color: 'black', fontFamily: 'Brice-Light' }}>Green</h4>
     </div>
 
     <div className="port-view">
-        <h4 style={{ color: 'black', fontFamily: 'Brice-Light' }}>Pink</h4>
+        <h4 data-aos="fade-left" style={{ color: 'black', fontFamily: 'Brice-Light' }}>Pink</h4>
     </div>
 </div>
 

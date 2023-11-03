@@ -14,6 +14,7 @@ import { Parallax } from "react-parallax";
 
 const image1 = '/assets/images/bg/riverTube2.0.png';
 const image2 = '/assets/images/bg/riverTube2.0.png'
+const image3 = '/assets/images/logo/ATX_Float_Logo 2/Banner-Logo.jpg'
 
 const portfolioItems = [
     {
@@ -21,7 +22,8 @@ const portfolioItems = [
         category: 'Development',
         title: 'Getting tickets to the big showlaksdfklasdjflkasdjfklsadfjlkasdjfklasdjflkasdfjlkasdjfklasdjdasklfjklsadjfkldsa',
         url: `/assets/images/portfolio/portfolio-6.jpg`,
-        addittionalStyles: ''
+        addittionalStyles: '',
+        link: ''
         // trydo/public/assets/images/portfolio/portfolio-6.jpg
         
     },
@@ -30,7 +32,8 @@ const portfolioItems = [
         category: 'Development Bitch',
         title: 'Getting tickets to the big show',
         url: '/assets/images/about/about-3.png',
-        addittionalStyles: ''
+        addittionalStyles: '',
+        link: ''
 
         
     },
@@ -39,7 +42,8 @@ const portfolioItems = [
         category: 'Development Bitch',
         title: 'Getting tickets to the big show',
         url: '/assets/images/portfolio/interior/atx_float_tubes_0012_atx_float_tubes.png_0009_Vector-Smart-Object-1.png',
-        addittionalStyles: { backgroundSize: '90%' }
+        addittionalStyles: { backgroundSize: '90%' },
+        link: ''
     
     },
     {
@@ -47,14 +51,16 @@ const portfolioItems = [
         category: 'Development Archer',
         title: 'Getting tickets to the big show',
         url: '/assets/images/ATX_Float_Wholesale_files/1400x1400-1.png',
-        addittionalStyles: { backgroundSize: '150%' }
+        addittionalStyles: { backgroundSize: '150%' },
+        link: ''
     },
     {
         image: 'test',
         category: 'Development Bitch',
         title: 'Getting tickets to the big show',
         url: '/assets/images/portfolio/portfolio-static-02.jpg',
-        addittionalStyles: '' // Corrected property name
+        addittionalStyles: '',
+        link: ''
     }
     
     // ... add more portfolio items as needed
@@ -214,9 +220,9 @@ const Portfolio = () => {
                 <div className="portfolio-area ptb--120 bg_color--5" id='riverTubes' style={backGroundBrown}>
                     <div className="portfolio-sacousel-inner">
                         <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12">
-                                <Parallax bgImage={image1} strength={800} style={{padding: '70px',}}>
+                            <div className="row" >
+                                <div className="col-lg-12" >
+                                <Parallax bgImage={image3} strength={800} style={{padding: '70px', }}>
                                     <div className="section-title text-center service-style--3 mb--30">
                                         <h2 style={{fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}} data-aos="fade-up" data-aos-duration="750"  className="title">River Tubes</h2>
                                         {/* <p style={{color:'white', fontFamily: 'Brice-Light'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p> */}
@@ -244,7 +250,7 @@ const Portfolio = () => {
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12">
-                                <Parallax bgImage={image1} strength={800} style={{padding: '70px',}}>
+                                <Parallax bgImage={image3} strength={800} style={{padding: '70px',}}>
                                     <div className="section-title text-center service-style--3 mb--30">
                                         <h2 style={{fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}} data-aos="fade-up" data-aos-duration="750"  className="title">Park Tubes</h2>
                                         {/* <p style={{color:'white', fontFamily: 'Brice-Light'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p> */}
@@ -272,7 +278,7 @@ const Portfolio = () => {
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12">
-                                <Parallax bgImage={image1} strength={800} style={{padding: '70px',}}>
+                                <Parallax bgImage={image3} strength={800} style={{padding: '70px',}}>
                                     <div className="section-title text-center service-style--3 mb--30">
                                         <h2 style={{fontFamily: 'Brice-Black', color: '#ef5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}} className="title" data-aos="fade-up" data-aos-duration="750" >Awesome Gear</h2>
                                         {/* <p style={{color:'white', fontFamily: 'Brice-Light'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p> */}
