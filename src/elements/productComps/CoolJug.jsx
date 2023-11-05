@@ -15,6 +15,7 @@ import './product.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 
+
 const photos = [
     {
         image: '02',
