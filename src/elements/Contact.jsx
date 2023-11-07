@@ -8,10 +8,10 @@ import ScrollToTop from 'react-scroll-up';
 import { FiChevronUp } from "react-icons/fi";
 import Header from "../component/header/Header";
 import Footer from "../component/footer/Footer";
-import Breadcrumb2_0 from "./common/BreadCrumb2.0";
 import Breadcrumb from "./common/Breadcrumb";
-import Scrollspy from "react-scrollspy";
-import { FiMenu, FiX } from "react-icons/fi";
+// import Breadcrumb2_0 from "./common/BreadCrumb2.0";
+// import Scrollspy from "react-scrollspy";
+// import { FiMenu, FiX } from "react-icons/fi";
 import { Helmet } from "react-helmet";
 
 import AOS from 'aos';
@@ -20,9 +20,9 @@ import 'aos/dist/aos.css';
 AOS.init();
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
-const footerBackground ={
-    backgroundColor: '#44494e'
- }
+// const footerBackground ={
+//     backgroundColor: '#44494e'
+//  }
 
 class Contact extends Component{
     static defaultProps = {
@@ -103,7 +103,7 @@ class Contact extends Component{
                                     </div>
                                     <div className="inner">
                                         <h4 style={{ fontFamily: 'Brice-Black', fontSize: '30px',  color: '#EF5474', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)'}}  className="title">Email Address</h4>
-                                        <p><a style={{ fontFamily: 'Brice-Light'}} href="mailto:team@atxfloat.com" target="_blank">team@atxfloat.com</a></p><br/>
+                                        <p><a style={{ fontFamily: 'Brice-Light'}} href="mailto:team@atxfloat.com" rel="noopener noreferrer" target="_blank">team@atxfloat.com</a></p><br/>
                                         {/* <p><a href="mailto:example@gmail.com">example@gmail.com</a></p> */}
                                     </div>
                                 </div>

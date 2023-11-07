@@ -5,11 +5,11 @@ import './header.css';
 
 
 
-const headerStyle = {
-    backgroundImage: `url('/assets/images/IMG_6288.png')`,
-    position: 'top'
-    // backgroundImage: `url('/assets/images/bg/ATXBanner.jpg')`,
-  };
+// const headerStyle = {
+//     backgroundImage: `url('/assets/images/IMG_6288.png')`,
+//     position: 'top'
+//     // backgroundImage: `url('/assets/images/bg/ATXBanner.jpg')`,
+//   };
 
 
   class Header extends Component {
@@ -55,7 +55,7 @@ const headerStyle = {
                 }
             }
         }
-        const { logo, color = 'default-color' } = this.props;
+        // const { logo, color = 'default-color' } = this.props;
         const headerClass = this.state.scrolled ? 'header-area formobile-menu header--transparent scrolled' : 'header-area formobile-menu header--transparent';
         const fixedClass = this.state.scrolled ? 'fixed-menu' : '';
         const showMenu = this.state.scrolled ? 'block' : 'none'; // Add this line

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import {Helmet} from 'react-helmet'
-import { Logo } from "./Logo";
 
 // const backgroundImageStyle = {
 //     background: `url('/ATXF_browser_tab_icon_transparent.png')`,

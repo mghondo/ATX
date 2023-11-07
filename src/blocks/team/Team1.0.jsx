@@ -1,5 +1,5 @@
 import React from 'react'
-import data from "./data";
+// import data from "./data";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 
@@ -8,7 +8,7 @@ AOS.init();
 
 
 const Team10  = (props) => {
-    const itemSlice = data.slice(0 , props.item)
+    // const itemSlice = data.slice(0 , props.item)
     return (
         <div>
         <div className="container" style={{marginTop: '50px', padding: '0px'}}>      

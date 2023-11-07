@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import TypingAnimation from "./TypingAnimation";
+// import TypingAnimation from "./TypingAnimation";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 

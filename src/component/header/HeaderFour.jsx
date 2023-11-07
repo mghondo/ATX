@@ -30,7 +30,7 @@ class HeaderFour extends Component{
             }
         }
         
-        const { logo, color , headerPosition } = this.props;
+        const { color , headerPosition } = this.props;
         let logoUrl = <img style={{ maxWidth: '200px', maxHeight: '40px' }}  src="/assets/images/logo/ATX_Logo_6dcef0.png" alt="Trydo" />;
         // trydo/public/assets/images/logo/ATX Float_Logo 2/ATX Logo_6dcef0.png
         // if(logo === 'light'){
