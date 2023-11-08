@@ -38,7 +38,6 @@ class PortfolioListNew extends Component {
                 ></div>
 
                 <div className={`bg-blr-image ${value.image}`}></div>
-                // "image-4"
               </div>
               <div className="content">
                 <div className="inner">

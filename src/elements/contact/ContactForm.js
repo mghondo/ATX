@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import TypingAnimation from "../common/TypingAnimation";
 // import emailjs from "@emailjs/browser";
@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 
 AOS.init();
 
-const textToType = "Hello, I'm a typing animation!";
+// const textToType = "Hello, I'm a typing animation!";
 
 const Result = () => {
   return (

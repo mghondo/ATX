@@ -31,9 +31,3 @@ const TypingAnimation = ({ text, elementType = 'p', typingSpeed = 50, style }) =
 };
 
 export default TypingAnimation;
-
-
-{/* <div>
-<h1>Typing Animation Example</h1>
-<TypingAnimation text={textToType} elementType="span" typingSpeed={50} style={customStyle} />
-</div> */}
